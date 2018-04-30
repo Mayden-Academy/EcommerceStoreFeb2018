@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.39)
 # Database: ecommerce-shop
-# Generation Time: 2018-04-30 13:22:20 +0000
+# Generation Time: 2018-04-30 13:38:57 +0000
 # ************************************************************
 
 
@@ -56,7 +56,7 @@ DROP TABLE IF EXISTS `images`;
 CREATE TABLE `images` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `productId` int(11) DEFAULT NULL,
-  `imageRef` varchar(255) DEFAULT NULL,
+  `imageFilePath` varchar(255) DEFAULT NULL,
   `deleted` tinyint(4) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=latin1;
@@ -64,7 +64,7 @@ CREATE TABLE `images` (
 LOCK TABLES `images` WRITE;
 /*!40000 ALTER TABLE `images` DISABLE KEYS */;
 
-INSERT INTO `images` (`id`, `productId`, `imageRef`, `deleted`)
+INSERT INTO `images` (`id`, `productId`, `imageFilePath`, `deleted`)
 VALUES
 	(1,1,'/src/assets/img/cat1.jpg',0),
 	(2,2,'/src/assets/img/cat1.jpg',0),
