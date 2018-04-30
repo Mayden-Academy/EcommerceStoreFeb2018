@@ -1,2 +1,7 @@
 <?php
-class Product {}
+
+namespace store;
+
+class Product {
+
+}

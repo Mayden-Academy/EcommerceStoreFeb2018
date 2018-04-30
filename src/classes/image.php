@@ -1,2 +1,7 @@
 <?php
-class Image {}
+
+namespace store;
+
+class Image {
+
+}

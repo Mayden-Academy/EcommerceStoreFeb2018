@@ -1,2 +1,7 @@
 <?php
-class Category {}
+
+namespace store;
+
+class Category {
+
+}
