@@ -12,29 +12,60 @@
 </head>
 <body>
     <div class="row">
-        <nav class="navbar-fixed-top col-xs-12" style="height: 100px; background-color: green" >
-            <strong>Totally Pawesome</strong>
+        <nav class="navbar-fixed-top col-xs-12 col-xs-offset-3 col-md-offset-1" style="height: 100px; background-color: green" >
+            <h1>Totally Pawesome</h1>
         </nav>
     </div>
-    <aside class="col-xs-2" style="height: 100vh; background-color: red">
-        <ul>
-            <li>Home</li>
-            <li>Category1</li>
-            <li>Category2</li>
-            <li>Category3</li>
-            <li>Category4</li>
-            <li>Category5</li>
-            <li>Category6</li>
-        </ul>
+    <aside class="col-xs-3 col-md-1" style="height: 100vh; background-color: red">
+        <a href="#">
+            <h2>Home</h2>
+        </a>
+        <a href="#">
+            <h4>Category1</h4>
+        </a>
+        <a href="#">
+            <h4>Category2</h4>
+        </a>
+        <a href="#">
+            <h4>Category3</h4>
+        </a>
+        <a href="#">
+            <h4>Category4</h4>
+        </a>
+        <a href="#">
+            <h4>Category5</h4>
+        </a>
+        <a href="#">
+            <h4>Category6</h4>
+        </a>
     </aside>
-    <main>
+    <main class="col-xs-offset-2">
         <div class="row">
-            <div class="col-xs-3" style="height: 100px; background-color: blue"></div>
-            <div class="col-xs-3" style="height: 100px; background-color: brown"></div>
-            <div class="col-xs-3" style="height: 100px; background-color: orange"></div>
-            <div class="col-xs-3" style="height: 100px; background-color: purple"></div>
-            <div class="col-xs-3" style="height: 100px; background-color: grey"></div>
-            <div class="col-xs-3" style="height: 100px; background-color: yellow"></div>
+            <h1>Categories</h1>
+            <div class="col-xs-8 col-md-4" style="height: 100px; background-color: blue">
+                <img src="">
+                <strong>Category1</strong>
+            </div>
+            <div class="col-xs-8 col-md-4" style="height: 100px; background-color: brown">
+                <img src="">
+                <strong>Category2</strong>
+            </div>
+            <div class="col-xs-8 col-md-4" style="height: 100px; background-color: orange">
+                <img src="">
+                <strong>Category3</strong>
+            </div>
+            <div class="col-xs-8 col-md-4" style="height: 100px; background-color: purple">
+                <img src="">
+                <strong>Category4</strong>
+            </div>
+            <div class="col-xs-8 col-md-4" style="height: 100px; background-color: grey">
+                <img src="">
+                <strong>Category5</strong>
+            </div>
+            <div class="col-xs-8 col-md-4" style="height: 100px; background-color: yellow">
+                <img src="">
+                <strong>Category6</strong>
+            </div>
         </div>
     </main>
 </body>
