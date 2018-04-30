@@ -12,11 +12,11 @@
 </head>
 <body>
     <div class="row">
-        <nav class="navbar-fixed-top col-xs-12 col-xs-offset-3 col-md-offset-1" style="height: 100px; background-color: green" >
+        <nav class="navbar-fixed-top col-xs-12 col-xs-offset-3 col-md-offset-1">
             <h1>Totally Pawesome</h1>
         </nav>
     </div>
-    <aside class="col-xs-3 col-md-1" style="height: 100vh; background-color: red">
+    <aside class="col-xs-3 col-md-1">
         <a href="#">
             <h2>Home</h2>
         </a>
@@ -45,37 +45,37 @@
             <div class="col-xs-8 col-md-4">
                 <a href="#">
                     <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
-                    <h5>Category1</h5>
+                    <h4>Category1</h4>
                 </a>
             </div>
             <div class="col-xs-8 col-md-4">
                 <a href="#">
                     <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
-                    <h5>Category1</h5>
+                    <h4>Category1</h4>
                 </a>
             </div>
             <div class="col-xs-8 col-md-4">
                 <a href="#">
                     <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
-                    <h5>Category1</h5>
+                    <h4>Category1</h4>
                 </a>
             </div>
             <div class="col-xs-8 col-md-4">
                 <a href="#">
                     <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
-                    <h5>Category1</h5>
+                    <h4>Category1</h4>
                 </a>
             </div>
             <div class="col-xs-8 col-md-4">
                 <a href="#">
                     <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
-                    <h5>Category1</h5>
+                    <h4>Category1</h4>
                 </a>
             </div>
             <div class="col-xs-8 col-md-4">
                 <a href="#">
                     <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
-                    <h5>Category1</h5>
+                    <h4>Category1</h4>
                 </a>
             </div>
         </div>

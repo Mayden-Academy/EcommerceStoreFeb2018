@@ -1,0 +1,27 @@
+
+main {
+    margin-top: 100px;
+}
+
+nav {
+    background-color: #663399;
+    height: 100px;
+}
+
+aside {
+    height: 100vh;
+    background-color: #708090;
+}
+
+aside a {
+    color: #ffffff;
+    padding: 5px;
+}
+
+aside a:hover {
+    color: #0000ff;
+}
+
+nav h1 {
+    color: #ffffff;
+}
