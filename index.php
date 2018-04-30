@@ -11,18 +11,31 @@
     <link rel="stylesheet" type="text/css" href="src/assets/css/styles.css">
 </head>
 <body>
-<aside class="col-xs-1" style="height: 100vh; background-color: red">
-    <ul>
-        <li>Home</li>
-        <li>Category1</li>
-        <li>Category2</li>
-        <li>Category3</li>
-        <li>Category4</li>
-        <li>Category5</li>
-        <li>Category6</li>
-    </ul>
-</aside>
-<nav class="navbar-fixed-top" style="height: 100px; background-color: green" ></nav>
-<main></main>
+    <div class="row">
+        <nav class="navbar-fixed-top col-xs-12" style="height: 100px; background-color: green" >
+            <strong>Totally Pawesome</strong>
+        </nav>
+    </div>
+    <aside class="col-xs-2" style="height: 100vh; background-color: red">
+        <ul>
+            <li>Home</li>
+            <li>Category1</li>
+            <li>Category2</li>
+            <li>Category3</li>
+            <li>Category4</li>
+            <li>Category5</li>
+            <li>Category6</li>
+        </ul>
+    </aside>
+    <main>
+        <div class="row">
+            <div class="col-xs-3" style="height: 100px; background-color: blue"></div>
+            <div class="col-xs-3" style="height: 100px; background-color: brown"></div>
+            <div class="col-xs-3" style="height: 100px; background-color: orange"></div>
+            <div class="col-xs-3" style="height: 100px; background-color: purple"></div>
+            <div class="col-xs-3" style="height: 100px; background-color: grey"></div>
+            <div class="col-xs-3" style="height: 100px; background-color: yellow"></div>
+        </div>
+    </main>
 </body>
 </html>
