@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.39)
 # Database: ecommerce-shop
-# Generation Time: 2018-04-30 13:43:05 +0000
+# Generation Time: 2018-04-30 14:19:17 +0000
 # ************************************************************
 
 
@@ -29,20 +29,22 @@ CREATE TABLE `categories` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `categoryName` varchar(255) DEFAULT NULL,
   `deleted` tinyint(4) DEFAULT '0',
+  `defaultImageFilepath` varchar(255) NOT NULL DEFAULT '',
+  `defaultImageAlt` varchar(255) DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
 
-INSERT INTO `categories` (`id`, `categoryName`, `deleted`)
+INSERT INTO `categories` (`id`, `categoryName`, `deleted`, `defaultImageFilepath`, `defaultImageAlt`)
 VALUES
-	(1,'Hats',0),
-	(2,'Socks',0),
-	(3,'Sportswear',0),
-	(4,'Dungarees',0),
-	(5,'Evening Wear',0),
-	(6,'Fancy Dress',0);
+	(1,'Hats',0,'/src/assets/img/cat1.jpg',''),
+	(2,'Socks',0,'/src/assets/img/cat1.jpg',''),
+	(3,'Sportswear',0,'/src/assets/img/cat1.jpg',''),
+	(4,'Dungarees',0,'/src/assets/img/cat1.jpg',''),
+	(5,'Evening Wear',0,'/src/assets/img/cat1.jpg',''),
+	(6,'Fancy Dress',0,'/src/assets/img/cat1.jpg','');
 
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -58,54 +60,55 @@ CREATE TABLE `images` (
   `productId` int(11) DEFAULT NULL,
   `imageFilePath` varchar(255) DEFAULT NULL,
   `deleted` tinyint(4) DEFAULT '0',
+  `alt` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `images` WRITE;
 /*!40000 ALTER TABLE `images` DISABLE KEYS */;
 
-INSERT INTO `images` (`id`, `productId`, `imageFilePath`, `deleted`)
+INSERT INTO `images` (`id`, `productId`, `imageFilePath`, `deleted`, `alt`)
 VALUES
-	(1,1,'/src/assets/img/cat1.jpg',0),
-	(2,2,'/src/assets/img/cat1.jpg',0),
-	(3,3,'/src/assets/img/cat1.jpg',0),
-	(4,4,'/src/assets/img/cat1.jpg',0),
-	(5,5,'/src/assets/img/cat1.jpg',0),
-	(6,6,'/src/assets/img/cat1.jpg',0),
-	(7,7,'/src/assets/img/cat1.jpg',0),
-	(8,8,'/src/assets/img/cat1.jpg',0),
-	(9,9,'/src/assets/img/cat1.jpg',0),
-	(10,10,'/src/assets/img/cat1.jpg',0),
-	(11,11,'/src/assets/img/cat1.jpg',0),
-	(12,12,'/src/assets/img/cat1.jpg',0),
-	(13,13,'/src/assets/img/cat1.jpg',0),
-	(14,14,'/src/assets/img/cat1.jpg',0),
-	(15,15,'/src/assets/img/cat1.jpg',0),
-	(16,16,'/src/assets/img/cat1.jpg',0),
-	(17,17,'/src/assets/img/cat1.jpg',0),
-	(18,18,'/src/assets/img/cat1.jpg',0),
-	(19,19,'/src/assets/img/cat1.jpg',0),
-	(20,20,'/src/assets/img/cat1.jpg',0),
-	(21,21,'/src/assets/img/cat1.jpg',0),
-	(22,22,'/src/assets/img/cat1.jpg',0),
-	(23,23,'/src/assets/img/cat1.jpg',0),
-	(24,24,'/src/assets/img/cat1.jpg',0),
-	(25,25,'/src/assets/img/cat1.jpg',0),
-	(26,26,'/src/assets/img/cat1.jpg',0),
-	(27,27,'/src/assets/img/cat1.jpg',0),
-	(28,28,'/src/assets/img/cat1.jpg',0),
-	(29,29,'/src/assets/img/cat1.jpg',0),
-	(30,30,'/src/assets/img/cat1.jpg',0),
-	(31,31,'/src/assets/img/cat1.jpg',0),
-	(32,32,'/src/assets/img/cat1.jpg',0),
-	(33,33,'/src/assets/img/cat1.jpg',0),
-	(34,34,'/src/assets/img/cat1.jpg',0),
-	(35,35,'/src/assets/img/cat1.jpg',0),
-	(36,36,'/src/assets/img/cat1.jpg',0),
-	(37,37,'/src/assets/img/cat1.jpg',0),
-	(38,38,'/src/assets/img/cat1.jpg',0),
-	(39,39,'/src/assets/img/cat1.jpg',0),
-	(40,40,'/src/assets/img/cat1.jpg',0);
+	(1,1,'/src/assets/img/cat1.jpg',0,NULL),
+	(2,2,'/src/assets/img/cat1.jpg',0,NULL),
+	(3,3,'/src/assets/img/cat1.jpg',0,NULL),
+	(4,4,'/src/assets/img/cat1.jpg',0,NULL),
+	(5,5,'/src/assets/img/cat1.jpg',0,NULL),
+	(6,6,'/src/assets/img/cat1.jpg',0,NULL),
+	(7,7,'/src/assets/img/cat1.jpg',0,NULL),
+	(8,8,'/src/assets/img/cat1.jpg',0,NULL),
+	(9,9,'/src/assets/img/cat1.jpg',0,NULL),
+	(10,10,'/src/assets/img/cat1.jpg',0,NULL),
+	(11,11,'/src/assets/img/cat1.jpg',0,NULL),
+	(12,12,'/src/assets/img/cat1.jpg',0,NULL),
+	(13,13,'/src/assets/img/cat1.jpg',0,NULL),
+	(14,14,'/src/assets/img/cat1.jpg',0,NULL),
+	(15,15,'/src/assets/img/cat1.jpg',0,NULL),
+	(16,16,'/src/assets/img/cat1.jpg',0,NULL),
+	(17,17,'/src/assets/img/cat1.jpg',0,NULL),
+	(18,18,'/src/assets/img/cat1.jpg',0,NULL),
+	(19,19,'/src/assets/img/cat1.jpg',0,NULL),
+	(20,20,'/src/assets/img/cat1.jpg',0,NULL),
+	(21,21,'/src/assets/img/cat1.jpg',0,NULL),
+	(22,22,'/src/assets/img/cat1.jpg',0,NULL),
+	(23,23,'/src/assets/img/cat1.jpg',0,NULL),
+	(24,24,'/src/assets/img/cat1.jpg',0,NULL),
+	(25,25,'/src/assets/img/cat1.jpg',0,NULL),
+	(26,26,'/src/assets/img/cat1.jpg',0,NULL),
+	(27,27,'/src/assets/img/cat1.jpg',0,NULL),
+	(28,28,'/src/assets/img/cat1.jpg',0,NULL),
+	(29,29,'/src/assets/img/cat1.jpg',0,NULL),
+	(30,30,'/src/assets/img/cat1.jpg',0,NULL),
+	(31,31,'/src/assets/img/cat1.jpg',0,NULL),
+	(32,32,'/src/assets/img/cat1.jpg',0,NULL),
+	(33,33,'/src/assets/img/cat1.jpg',0,NULL),
+	(34,34,'/src/assets/img/cat1.jpg',0,NULL),
+	(35,35,'/src/assets/img/cat1.jpg',0,NULL),
+	(36,36,'/src/assets/img/cat1.jpg',0,NULL),
+	(37,37,'/src/assets/img/cat1.jpg',0,NULL),
+	(38,38,'/src/assets/img/cat1.jpg',0,NULL),
+	(39,39,'/src/assets/img/cat1.jpg',0,NULL),
+	(40,40,'/src/assets/img/cat1.jpg',0,NULL);
 
 /*!40000 ALTER TABLE `images` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -126,7 +129,7 @@ CREATE TABLE `products` (
   `availableColors` enum('Red','Blue','Green') DEFAULT 'Red',
   `deleted` tinyint(4) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
