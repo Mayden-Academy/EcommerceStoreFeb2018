@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>eCommerce Page</title>
+    <title>Totally Pawesome</title>
 </head>
 <body>
 
