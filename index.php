@@ -42,29 +42,41 @@
     <main class="col-xs-offset-2">
         <div class="row">
             <h1>Categories</h1>
-            <div class="col-xs-8 col-md-4" style="height: 100px; background-color: blue">
-                <img src="">
-                <strong>Category1</strong>
+            <div class="col-xs-8 col-md-4">
+                <a href="#">
+                    <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
+                    <h5>Category1</h5>
+                </a>
             </div>
-            <div class="col-xs-8 col-md-4" style="height: 100px; background-color: brown">
-                <img src="">
-                <strong>Category2</strong>
+            <div class="col-xs-8 col-md-4">
+                <a href="#">
+                    <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
+                    <h5>Category1</h5>
+                </a>
             </div>
-            <div class="col-xs-8 col-md-4" style="height: 100px; background-color: orange">
-                <img src="">
-                <strong>Category3</strong>
+            <div class="col-xs-8 col-md-4">
+                <a href="#">
+                    <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
+                    <h5>Category1</h5>
+                </a>
             </div>
-            <div class="col-xs-8 col-md-4" style="height: 100px; background-color: purple">
-                <img src="">
-                <strong>Category4</strong>
+            <div class="col-xs-8 col-md-4">
+                <a href="#">
+                    <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
+                    <h5>Category1</h5>
+                </a>
             </div>
-            <div class="col-xs-8 col-md-4" style="height: 100px; background-color: grey">
-                <img src="">
-                <strong>Category5</strong>
+            <div class="col-xs-8 col-md-4">
+                <a href="#">
+                    <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
+                    <h5>Category1</h5>
+                </a>
             </div>
-            <div class="col-xs-8 col-md-4" style="height: 100px; background-color: yellow">
-                <img src="">
-                <strong>Category6</strong>
+            <div class="col-xs-8 col-md-4">
+                <a href="#">
+                    <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
+                    <h5>Category1</h5>
+                </a>
             </div>
         </div>
     </main>
