@@ -12,17 +12,17 @@
 </head>
 <body>
 <section class="row banner">
-    <div class="home col-xs-2">
+    <div class="home col-xs-3 col-sm-2">
         <a href="#">
             <h2>Home</h2>
         </a>
     </div>
-    <div class="shop-name col-xs-10">
+    <div class="shop-name col-xs-9 col-sm-10">
         <h2>Totally Pawesome</h2>
     </div>
 </section>
 <section class="row main">
-    <div class="sidebar col-xs-2">
+    <div class="sidebar col-xs-3 col-sm-2">
         <a href="#">
             <h4>Category1</h4>
         </a>
@@ -42,61 +42,61 @@
             <h4>Category6</h4>
         </a>
     </div>
-    <div class="main-content col-xs-10">
+    <div class="main-content col-xs-9 col-sm-10">
         <div class="row">
             <h2>Product Category</h2>
         </div>
         <div class="row">
-            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
+            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">
                 <a href="#">
                     <img class="img-thumbnail" src="../assets/img/cat2.jpg">
                     <h4>Product Name</h4>
                     <h5>£00.00</h5>
                 </a>
             </div>
-            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
+            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">
                 <a href="#">
                     <img class="img-thumbnail" src="../assets/img/cat2.jpg">
                     <h4>Product Name</h4>
                     <h5>£00.00</h5>
                 </a>
             </div>
-            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
+            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">
                 <a href="#">
                     <img class="img-thumbnail" src="../assets/img/cat2.jpg">
                     <h4>Product Name</h4>
                     <h5>£00.00</h5>
                 </a>
             </div>
-            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
+            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">
                 <a href="#">
                     <img class="img-thumbnail" src="../assets/img/cat2.jpg">
                     <h4>Product Name</h4>
                     <h5>£00.00</h5>
                 </a>
             </div>
-            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
+            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">
                 <a href="#">
                     <img class="img-thumbnail" src="../assets/img/cat2.jpg">
                     <h4>Product Name</h4>
                     <h5>£00.00</h5>
                 </a>
             </div>
-            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
+            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">
                 <a href="#">
                     <img class="img-thumbnail" src="../assets/img/cat2.jpg">
                     <h4>Product Name</h4>
                     <h5>£00.00</h5>
                 </a>
             </div>
-            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
+            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">
                 <a href="#">
                     <img class="img-thumbnail" src="../assets/img/cat2.jpg">
                     <h4>Product Name</h4>
                     <h5>£00.00</h5>
                 </a>
             </div>
-            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
+            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">
                 <a href="#">
                     <img class="img-thumbnail" src="../assets/img/cat2.jpg">
                     <h4>Product Name</h4>
