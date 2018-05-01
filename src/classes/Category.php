@@ -5,22 +5,17 @@ namespace Store;
 class Category {
     private $id;
     private $categoryName;
+    private $defaultImagePath;
+    private $defaultImageAlt;
+    private $path = "/src/app/categories.php?id=";
 
-    //getters?
+    public function getCategoryListLink(){
+        return "<a href='" . $this->path . $this->id. "' >" . $this->categoryName . "</a><br>";
+    }
 
-    //setters?
+    public function getCategoryImageLink(){
+        return "<a href='" . $this->path . $this->id. "' >" . $this->categoryName . "</a><br>";
+    }
 
+    //display categoryImage
 }
-
-
-//function displayCategories ($array):string {
-//
-//    $HTMLString = "";
-//    $path = "/src/app/categories.php?id=";
-//
-//    foreach ($array as $category){
-//        $HTMLString .= "<a href='" . $path . $category["id"] . "' >" . $category["categoryName"] . "</a><br>" ;
-//    }
-//
-//    return $HTMLString;
-//}
