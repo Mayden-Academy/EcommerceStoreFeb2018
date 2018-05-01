@@ -24,7 +24,7 @@ class Store implements GetCategories{
      * Store constructor, adds db connection to object.
      * @param $db PDO object
      */
-    public function __construct($db) {
+    public function __construct(PDO $db) {
         $this->dBConnection = $db;
     }
 }
