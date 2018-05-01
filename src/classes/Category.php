@@ -18,9 +18,9 @@ class Category {
         return "<a href='" .
             $this->path .
             $this->id .
-            "' ><h4>" .
+            "' ><h5>" .
             $this->categoryName .
-            "</h4></a><br>";
+            "</h5></a><br>";
     }
 
     /**
