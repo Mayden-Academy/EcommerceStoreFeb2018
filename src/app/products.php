@@ -1,4 +1,4 @@
-<?php //require_once __DIR__ . '../../vendor/autoload.php'; ?>
+<?php require_once '../../vendor/autoload.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,33 +42,89 @@
             <h4>Category6</h4>
         </a>
     </div>
-    <div class="col-xs-10">
+    <div class="main-content col-xs-10">
         <div class="row">
             <h2>Product Category</h2>
         </div>
         <div class="row">
-            <div class="product col-xs-8 col-sm-4 col-md-3">
+            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
                 <a href="#">
                     <img class="img-thumbnail" src="../assets/img/cat2.jpg">
                     <h4>Product Name</h4>
                     <h5>£00.00</h5>
                 </a>
             </div>
-            <div class="product col-xs-8 col-sm-4 col-md-3">
+            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
                 <a href="#">
                     <img class="img-thumbnail" src="../assets/img/cat2.jpg">
                     <h4>Product Name</h4>
                     <h5>£00.00</h5>
                 </a>
             </div>
-            <div class="product col-xs-8 col-sm-4 col-md-3">
+            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
                 <a href="#">
                     <img class="img-thumbnail" src="../assets/img/cat2.jpg">
                     <h4>Product Name</h4>
                     <h5>£00.00</h5>
                 </a>
             </div>
-            <div class="product col-xs-8 col-sm-4 col-md-3">
+            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
+                <a href="#">
+                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">
+                    <h4>Product Name</h4>
+                    <h5>£00.00</h5>
+                </a>
+            </div>
+            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
+                <a href="#">
+                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">
+                    <h4>Product Name</h4>
+                    <h5>£00.00</h5>
+                </a>
+            </div>
+            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
+                <a href="#">
+                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">
+                    <h4>Product Name</h4>
+                    <h5>£00.00</h5>
+                </a>
+            </div>
+            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
+                <a href="#">
+                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">
+                    <h4>Product Name</h4>
+                    <h5>£00.00</h5>
+                </a>
+            </div>
+            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
+                <a href="#">
+                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">
+                    <h4>Product Name</h4>
+                    <h5>£00.00</h5>
+                </a>
+            </div>
+            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
+                <a href="#">
+                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">
+                    <h4>Product Name</h4>
+                    <h5>£00.00</h5>
+                </a>
+            </div>
+            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
+                <a href="#">
+                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">
+                    <h4>Product Name</h4>
+                    <h5>£00.00</h5>
+                </a>
+            </div>
+            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
+                <a href="#">
+                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">
+                    <h4>Product Name</h4>
+                    <h5>£00.00</h5>
+                </a>
+            </div>
+            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
                 <a href="#">
                     <img class="img-thumbnail" src="../assets/img/cat2.jpg">
                     <h4>Product Name</h4>
