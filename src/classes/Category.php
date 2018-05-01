@@ -17,7 +17,7 @@ class Category {
     public function getCategoryListLink():string {
         return "<a href='" .
             $this->path .
-            $this->id.
+            $this->id .
             "' ><h4>" .
             $this->categoryName .
             "</h4></a><br>";
@@ -33,8 +33,8 @@ class Category {
                 <a href='" .
                 $this->path .
                 $this->id .
-                "'><img class='img-thumbnail' src='".
-                $this->defaultImageFilePath.
+                "'><img class='img-thumbnail' src='" .
+                $this->defaultImageFilePath .
                 "' alt='" .
                 $this->defaultImageAlt .
                 "'><h4>" .

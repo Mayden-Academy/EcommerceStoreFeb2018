@@ -1,11 +1,11 @@
-<?php require_once __DIR__ . '/vendor/autoload.php';
+<?php
+require_once __DIR__ . '/vendor/autoload.php';
 use Store\Category as Category;
 use Store\DBConnect as DBConnect;
 use Store\Store as Store;
 $dBConnect = DBConnect::connectToDB();
-$store = new Store($dBConnect);
-$categories = $store->getCategories();
-
+Store::setPDO($dBConnect);
+$categories = Store::getCategories();
 ?>
 
 <!DOCTYPE html>

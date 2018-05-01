@@ -4,5 +4,5 @@ namespace store\interfaces;
 
 interface GetCategories
 {
-    public function getCategories();
+    public static function getCategories();
 }
