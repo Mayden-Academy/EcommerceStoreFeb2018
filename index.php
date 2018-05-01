@@ -1,4 +1,28 @@
-<?php require_once __DIR__ . '/vendor/autoload.php'; ?>
+<?php require_once __DIR__ . '/vendor/autoload.php';
+use Store\Category as Category;
+use Store\DBConnect as DBConnect;
+use Store\Store as Store;
+$dBConnect = DBConnect::connectToDB();
+$store = new Store($dBConnect);
+
+function displayCategoryList($store){
+    $categories = $store->getCategories();
+    $string = "";
+    foreach($categories as $category) {
+        $string .=  $category->getCategoryListLink();
+    }
+    return $string;
+}
+
+function displayCategoryImages($store){
+    $categories = $store->getCategories();
+    $string = "";
+    foreach($categories as $category) {
+        $string .= $category->getCategoryImageLink();
+    }
+    return $string;
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,24 +44,28 @@
         <a href="#">
             <h2>Home</h2>
         </a>
-        <a href="#">
-            <h4>Category1</h4>
-        </a>
-        <a href="#">
-            <h4>Category2</h4>
-        </a>
-        <a href="#">
-            <h4>Category3</h4>
-        </a>
-        <a href="#">
-            <h4>Category4</h4>
-        </a>
-        <a href="#">
-            <h4>Category5</h4>
-        </a>
-        <a href="#">
-            <h4>Category6</h4>
-        </a>
+        <?php
+        echo displayCategoryList($store);
+        ?>
+
+<!--        <a href="#">-->
+<!--            <h4>Category1</h4>-->
+<!--        </a>-->
+<!--        <a href="#">-->
+<!--            <h4>Category2</h4>-->
+<!--        </a>-->
+<!--        <a href="#">-->
+<!--            <h4>Category3</h4>-->
+<!--        </a>-->
+<!--        <a href="#">-->
+<!--            <h4>Category4</h4>-->
+<!--        </a>-->
+<!--        <a href="#">-->
+<!--            <h4>Category5</h4>-->
+<!--        </a>-->
+<!--        <a href="#">-->
+<!--            <h4>Category6</h4>-->
+<!--        </a>-->
     </aside>
     <main class="container col-xs-offset-3 col-sm-offset-2">
         <div class="row">
