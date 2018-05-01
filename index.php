@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="row">
-        <nav class="navbar-fixed-top col-xs-12 col-xs-offset-3 col-sm-offset-2">
+        <nav class="navbar-fixed-top col-xs-9 col-sm-10 col-xs-offset-3 col-sm-offset-2">
             <h1>Totally Pawesome</h1>
         </nav>
     </div>
@@ -39,40 +39,40 @@
             <h4>Category6</h4>
         </a>
     </aside>
-    <main class="col-xs-offset-3 col-sm-offset-2">
+    <main class="container col-xs-offset-3 col-sm-offset-2">
         <div class="row">
             <h1>Categories</h1>
-            <div class="col-xs-8 col-sm-3">
+            <div class="col-xs-8 col-sm-4">
                 <a href="#">
                     <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
                     <h4>Category1</h4>
                 </a>
             </div>
-            <div class="col-xs-8 col-sm-3">
+            <div class="col-xs-8 col-sm-4">
                 <a href="#">
                     <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
                     <h4>Category2</h4>
                 </a>
             </div>
-            <div class="col-xs-8 col-sm-3">
+            <div class="col-xs-8 col-sm-4">
                 <a href="#">
                     <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
                     <h4>Category3</h4>
                 </a>
             </div>
-            <div class="col-xs-8 col-sm-3">
+            <div class="col-xs-8 col-sm-4">
                 <a href="#">
                     <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
                     <h4>Category4</h4>
                 </a>
             </div>
-            <div class="col-xs-8 col-sm-3">
+            <div class="col-xs-8 col-sm-4">
                 <a href="#">
                     <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
                     <h4>Category5</h4>
                 </a>
             </div>
-            <div class="col-xs-8 col-sm-3">
+            <div class="col-xs-8 col-sm-4">
                 <a href="#">
                     <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
                     <h4>Category6</h4>
