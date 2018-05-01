@@ -3,7 +3,7 @@
 namespace Store;
 use Store\Category as Category;
 use Store\DBConnect as DBConnect;
-require_once "../../vendor/autoload.php";
+//require_once "../../vendor/autoload.php";
 use \PDO;
 
 
@@ -24,13 +24,14 @@ class Store {
 }
 
 
-$i = DBConnect::connectToDB();
+//$i = DBConnect::connectToDB();
+//
+//$store = new Store($i);
+////echo '<pre>' . var_export($bob->getCategories(), true) . '</pre>';
 
-$bob = new Store($i);
-//echo '<pre>' . var_export($bob->getCategories(), true) . '</pre>';
 
-$categories = $bob->getCategories();
 
-foreach($categories as $a) {
-    echo $a->HTMLList();
-}
+
+
+
+//echo displayCategoryImages($store);

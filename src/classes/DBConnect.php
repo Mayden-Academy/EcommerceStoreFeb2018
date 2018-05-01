@@ -1,7 +1,7 @@
 <?php
 
 namespace store;
-require_once "../../vendor/autoload.php";
+//require_once "../../vendor/autoload.php";
 
 use \PDO;
 use \Exception;
