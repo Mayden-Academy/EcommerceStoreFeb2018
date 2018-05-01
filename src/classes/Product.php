@@ -3,10 +3,13 @@
 namespace store;
 use \PDO;
 
-$db = new PDO('mysql:host=127.0.0.1; dbname=ecommerceStore2018', 'root');
+$db = new PDO('mysql:host=127.0.0.1; dbname=ecommerce-shop', 'root');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-$query = $db->prepare("SELECT * FROM products WHERE categoryId = :categoryId");
+$query = $db->prepare("
+SELECT `id`, `categoryId`, `productName`, `productPrice`, `productDescription`, `availableSizes`, `availableColors`, `deleted`
+FROM products 
+WHERE categoryId = :categoryId");
 
 $categoryId = '1';
 //var_dump($_GET['id']);
@@ -15,7 +18,8 @@ $query->bindParam(':categoryId', $categoryId);
 $query->execute();
 $result = $query->fetchAll(PDO::FETCH_CLASS, 'store\Product');
 
-var_dump($result);
+echo '<pre>' . var_export($result, true) . '</pre>';
+
 
 class Product
 {
@@ -62,5 +66,9 @@ class Product
     {
         return $this->availableColors;
     }
-
 }
+
+?>
+
+
+
