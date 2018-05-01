@@ -1,6 +1,6 @@
 <?php
 
-namespace store\interfaces;
+namespace Store\interfaces;
 
 interface GetCategories
 {
