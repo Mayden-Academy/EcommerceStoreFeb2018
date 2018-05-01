@@ -1,20 +1,16 @@
 <?php
 
-namespace store;
+require_once '../../vendor/autoload.php';
 
-use \PDO;
-use \store\Product;
+use Store\Product as Product;
+use Store\DBConnect as DBConnect;
+use Store\Store as Store;
 
-$db = new PDO('mysql:host=127.0.0.1; dbname=ecommerceStore2018', 'root');
-$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+$dBConnect = DBConnect::connectToDB();
+Store::setPDO($dBConnect);
+$categories = Store::getProducts(1);
 
-$query = $db->prepare("SELECT * FROM products WHERE categoryId = :categoryId");
+var_dump($categories);
 
-$categoryId = '1';
-//var_dump($_GET['id']);
 
-$query->bindParam(':categoryId', $categoryId);
-$query->execute();
-$result = $query->fetchAll(PDO::FETCH_CLASS, 'store/Product');
-
-var_dump($result);
+?>

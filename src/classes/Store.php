@@ -10,6 +10,13 @@ class Store implements GetCategories{
     static private $DB;
 
     /**
+     * Assign database connection $DB
+     */
+    public static function setPDO(PDO $db){
+        self::$DB = $db;
+    }
+
+    /**
      *Database query to get category data
      *
      * @return array array of objects of category class
@@ -20,7 +27,21 @@ class Store implements GetCategories{
         return $query->fetchAll(PDO::FETCH_CLASS, Category::class);
     }
 
-    public static function setPDO(PDO $db){
-        self::$DB = $db;
+    /**
+     *Database query to get products data
+     *
+     * @return array array of objects of products class
+     */
+    public static function getProducts($categoryId):array {
+        $query = self::$DB->prepare("
+            SELECT `id`, `categoryId`, `productName`, `productPrice`, `productDescription`, `availableSizes`, `availableColors`, `deleted`
+            FROM products 
+            WHERE categoryId = :categoryId");
+
+        $query->bindParam(':categoryId', $categoryId);
+        $query->execute();
+        return $query->fetchAll(PDO::FETCH_CLASS, 'Store\Product');
     }
+
+
 }
