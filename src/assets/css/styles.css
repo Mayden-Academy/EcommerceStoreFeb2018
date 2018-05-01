@@ -1,26 +1,84 @@
-main {
-    margin-top: 100px;
+/*main {*/
+    /*margin-top: 100px;*/
+/*}*/
+
+/*nav {*/
+    /*background-color: #663399;*/
+    /*height: 100px;*/
+/*}*/
+
+/*aside {*/
+    /*height: 100vh;*/
+    /*background-color: #708090;*/
+/*}*/
+
+/*aside a {*/
+    /*color: #ffffff;*/
+    /*padding: 5px;*/
+/*}*/
+
+/*aside a:hover {*/
+    /*color: #0000ff;*/
+/*}*/
+
+/*nav h1 {*/
+    /*color: #ffffff;*/
+/*}*/
+
+/*.page-contents h1 {*/
+    /*padding: 0 20px 20px;*/
+/*}*/
+
+
+/*REFACTOR*/
+
+html, body {
+    height: 100%;
 }
 
-nav {
-    background-color: #663399;
-    height: 100px;
+.row {
+    margin: 0;
 }
 
-aside {
-    height: 100vh;
+.banner {
+    color: #ffffff;
+}
+
+.banner a, .sidebar a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.banner a:hover, .sidebar a:hover {
+    color: #663399;
+}
+
+.home, .sidebar {
     background-color: #708090;
 }
 
-aside a {
-    color: #ffffff;
-    padding: 5px;
+.shop-name {
+    background-color: #663399;
 }
 
-aside a:hover {
-    color: #0000ff;
+/*.main {*/
+    /*height: 100vh;*/
+    /*overflow: auto;*/
+/*}*/
+
+.sidebar {
+    height: 100%;
 }
 
-nav h1 {
-    color: #ffffff;
+.sidebar h4 {
+    padding-top: 10px;
+}
+
+.product a {
+    color: #663399;
+    text-decoration: none;
+}
+
+.product a:hover {
+    color: #fb8c00;
 }
