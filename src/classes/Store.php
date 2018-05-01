@@ -2,6 +2,7 @@
 
 namespace Store;
 use Store\Category as Category;
+use Store\Product as Product;
 use \PDO;
 use Store\interfaces\GetCategories as GetCategories;
 
@@ -40,7 +41,7 @@ class Store implements GetCategories{
 
         $query->bindParam(':categoryId', $categoryId);
         $query->execute();
-        return $query->fetchAll(PDO::FETCH_CLASS, 'Store\Product');
+        return $query->fetchAll(PDO::FETCH_CLASS, Product::class);
     }
 
 

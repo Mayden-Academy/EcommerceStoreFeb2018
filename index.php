@@ -6,6 +6,7 @@ use Store\Store as Store;
 $dBConnect = DBConnect::connectToDB();
 Store::setPDO($dBConnect);
 $categories = Store::getCategories();
+
 ?>
 
 <!DOCTYPE html>
@@ -19,15 +20,18 @@ $categories = Store::getCategories();
     <link rel="stylesheet" type="text/css" href="src/assets/css/styles.css">
 </head>
 <body>
-    <div class="row">
-        <nav class="navbar-fixed-top col-xs-9 col-sm-10 col-xs-offset-3 col-sm-offset-2">
-            <h1>Totally Pawesome</h1>
-        </nav>
-    </div>
-    <aside class="col-xs-3 col-sm-2">
+<section class="row banner">
+    <div class="home col-xs-3 col-sm-2">
         <a href="#">
             <h2>Home</h2>
         </a>
+    </div>
+    <div class="shop-name col-xs-9 col-sm-10">
+        <h2>Totally Pawesome</h2>
+    </div>
+</section>
+<section class="row main">
+    <div class="sidebar col-xs-3 col-sm-2">
         <?php
         foreach($categories as $category) {
             if($category instanceof Category) {
@@ -35,10 +39,12 @@ $categories = Store::getCategories();
             }
         }
         ?>
-    </aside>
-    <main class="container col-xs-offset-3 col-sm-offset-2">
+    </div>
+    <div class="main-content col-xs-9 col-sm-10">
         <div class="row">
-            <h1>Categories</h1>
+            <h2>Categories</h2>
+        </div>
+        <div class="row index-tiles">
             <?php
             foreach($categories as $category) {
                 if($category instanceof Category) {
@@ -47,6 +53,7 @@ $categories = Store::getCategories();
             }
             ?>
         </div>
-    </main>
+    </div>
+</section>
 </body>
 </html>
