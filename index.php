@@ -51,31 +51,31 @@
             <div class="col-xs-8 col-md-4">
                 <a href="#">
                     <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
-                    <h4>Category1</h4>
+                    <h4>Category2</h4>
                 </a>
             </div>
             <div class="col-xs-8 col-md-4">
                 <a href="#">
                     <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
-                    <h4>Category1</h4>
+                    <h4>Category3</h4>
                 </a>
             </div>
             <div class="col-xs-8 col-md-4">
                 <a href="#">
                     <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
-                    <h4>Category1</h4>
+                    <h4>Category4</h4>
                 </a>
             </div>
             <div class="col-xs-8 col-md-4">
                 <a href="#">
                     <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
-                    <h4>Category1</h4>
+                    <h4>Category5</h4>
                 </a>
             </div>
             <div class="col-xs-8 col-md-4">
                 <a href="#">
                     <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
-                    <h4>Category1</h4>
+                    <h4>Category6</h4>
                 </a>
             </div>
         </div>
