@@ -9,14 +9,30 @@ class Category {
     private $defaultImageAlt;
     private $path = "/src/app/categories.php?id=";
 
-    public function getCategoryListLink(){
-        return "<a href='" . $this->path . $this->id. "' >" . $this->categoryName . "</a><br>";
+    /**
+     * Generates html for category list.
+     *
+     * @return string
+     */
+    public function getCategoryListLink():string {
+        return "<a href='" .
+            $this->path .
+            $this->id.
+            "' ><h4>" .
+            $this->categoryName .
+            "</h4></a><br>";
     }
 
-    public function getCategoryImageLink(){
+    /**
+     * Generates html for category blocks.
+     *
+     * @return string
+     */
+    public function getCategoryImageLink():string {
         return "<div class=\"col-xs-8 col-sm-4\">
                 <a href='" .
-                $this->path . $this->id .
+                $this->path .
+                $this->id .
                 "'><img class='img-thumbnail' src='".
                 $this->defaultImageFilePath.
                 "' alt='" .
