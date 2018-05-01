@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.39)
 # Database: ecommerce-shop
-# Generation Time: 2018-05-01 13:04:18 +0000
+# Generation Time: 2018-05-01 13:18:03 +0000
 # ************************************************************
 
 
@@ -39,12 +39,12 @@ LOCK TABLES `categories` WRITE;
 
 INSERT INTO `categories` (`id`, `categoryName`, `deleted`, `defaultImageFilepath`, `defaultImageAlt`)
 VALUES
-	(1,'Hats',0,'/EcommerceStoreFeb2018/src/assets/img/cat1.jpg','cat1'),
-	(2,'Socks',0,'/EcommerceStoreFeb2018/src/assets/img/cat1.jpg','cat1'),
-	(3,'Sportswear',0,'/EcommerceStoreFeb2018/src/assets/img/cat1.jpg','cat1'),
-	(4,'Dungarees',0,'/EcommerceStoreFeb2018/src/assets/img/cat1.jpg','cat1'),
-	(5,'Evening Wear',0,'/EcommerceStoreFeb2018/src/assets/img/cat1.jpg','cat1'),
-	(6,'Fancy Dress',0,'/EcommerceStoreFeb2018/src/assets/img/cat1.jpg','cat1');
+	(1,'Hats',0,'src/assets/img/cat1.jpg','cat1'),
+	(2,'Socks',0,'src/assets/img/cat1.jpg','cat1'),
+	(3,'Sportswear',0,'src/assets/img/cat1.jpg','cat1'),
+	(4,'Dungarees',0,'src/assets/img/cat1.jpg','cat1'),
+	(5,'Evening Wear',0,'src/assets/img/cat1.jpg','cat1'),
+	(6,'Fancy Dress',0,'src/assets/img/cat1.jpg','cat1');
 
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
