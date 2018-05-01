@@ -1,4 +1,12 @@
-<?php require_once __DIR__ . '/vendor/autoload.php'; ?>
+<?php
+require_once __DIR__ . '/vendor/autoload.php';
+use Store\Category as Category;
+use Store\DBConnect as DBConnect;
+use Store\Store as Store;
+$dBConnect = DBConnect::connectToDB();
+Store::setPDO($dBConnect);
+$categories = Store::getCategories();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,64 +28,24 @@
         <a href="#">
             <h2>Home</h2>
         </a>
-        <a href="#">
-            <h4>Category1</h4>
-        </a>
-        <a href="#">
-            <h4>Category2</h4>
-        </a>
-        <a href="#">
-            <h4>Category3</h4>
-        </a>
-        <a href="#">
-            <h4>Category4</h4>
-        </a>
-        <a href="#">
-            <h4>Category5</h4>
-        </a>
-        <a href="#">
-            <h4>Category6</h4>
-        </a>
+        <?php
+        foreach($categories as $category) {
+            if($category instanceof Category) {
+                echo $category->getCategoryListLink();
+            }
+        }
+        ?>
     </aside>
     <main class="container col-xs-offset-3 col-sm-offset-2">
         <div class="row">
             <h1>Categories</h1>
-            <div class="col-xs-8 col-sm-4">
-                <a href="#">
-                    <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
-                    <h4>Category1</h4>
-                </a>
-            </div>
-            <div class="col-xs-8 col-sm-4">
-                <a href="#">
-                    <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
-                    <h4>Category2</h4>
-                </a>
-            </div>
-            <div class="col-xs-8 col-sm-4">
-                <a href="#">
-                    <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
-                    <h4>Category3</h4>
-                </a>
-            </div>
-            <div class="col-xs-8 col-sm-4">
-                <a href="#">
-                    <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
-                    <h4>Category4</h4>
-                </a>
-            </div>
-            <div class="col-xs-8 col-sm-4">
-                <a href="#">
-                    <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
-                    <h4>Category5</h4>
-                </a>
-            </div>
-            <div class="col-xs-8 col-sm-4">
-                <a href="#">
-                    <img class="img-thumbnail" src="src/assets/img/cat1.jpg">
-                    <h4>Category6</h4>
-                </a>
-            </div>
+            <?php
+            foreach($categories as $category) {
+                if($category instanceof Category) {
+                    echo $category->getCategoryImageLink();
+                }
+            }
+            ?>
         </div>
     </main>
 </body>
