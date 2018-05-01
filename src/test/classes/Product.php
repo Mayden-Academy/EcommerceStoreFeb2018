@@ -10,7 +10,7 @@ class ProductTest extends TestCase
 
     public function testproductIsObject()
     {
-        $case = new \Store\Productz();
+        $case = new \Store\Product();
         $expected = true;
         $this->assertEquals(is_object($case), $expected);
     }

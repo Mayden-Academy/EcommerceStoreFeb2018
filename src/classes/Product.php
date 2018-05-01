@@ -16,12 +16,12 @@ $categoryId = '1';
 
 $query->bindParam(':categoryId', $categoryId);
 $query->execute();
-$result = $query->fetchAll(PDO::FETCH_CLASS, 'store\Productz');
+$result = $query->fetchAll(PDO::FETCH_CLASS, 'store\Product');
 
 echo '<pre>' . var_export($result, true) . '</pre>';
 
 
-class Productz
+class Product
 {
     private $id;
     private $categoryId;
