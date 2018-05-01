@@ -37,7 +37,8 @@ class Store implements GetCategories{
         $query = self::$DB->prepare("
             SELECT `id`, `categoryId`, `productName`, `productPrice`, `productDescription`, `availableSizes`, `availableColors`, `deleted`
             FROM products 
-            WHERE categoryId = :categoryId");
+            WHERE categoryId = :categoryId
+            AND `deleted` = 0");
 
         $query->bindParam(':categoryId', $categoryId);
         $query->execute();

@@ -66,6 +66,9 @@ class Product
     {
         return $this->availableColors;
     }
+
+
+
 }
 
 ?>

@@ -2,16 +2,15 @@
 <?php
 
 require_once '../../vendor/autoload.php';
-
+use Store\Category as Category;
 use Store\Product as Product;
 use Store\DBConnect as DBConnect;
 use Store\Store as Store;
 
 $dBConnect = DBConnect::connectToDB();
 Store::setPDO($dBConnect);
-$categories = Store::getProducts(1);
-
-var_dump($categories);
+$categories = Store::getCategories();
+$products = Store::getProducts($_GET['id']);
 
 ?>
 
@@ -38,115 +37,119 @@ var_dump($categories);
 </section>
 <section class="row main">
     <div class="sidebar col-xs-3 col-sm-2">
-        <a href="#">
-            <h4>Category1</h4>
-        </a>
-        <a href="#">
-            <h4>Category2</h4>
-        </a>
-        <a href="#">
-            <h4>Category3</h4>
-        </a>
-        <a href="#">
-            <h4>Category4</h4>
-        </a>
-        <a href="#">
-            <h4>Category5</h4>
-        </a>
-        <a href="#">
-            <h4>Category6</h4>
-        </a>
+        <?php
+        foreach($categories as $category) {
+            if($category instanceof Category) {
+                echo $category->getCategoryListLink();
+            }
+        }
+        ?>
     </div>
     <div class="main-content col-xs-9 col-sm-10">
         <div class="row">
             <h2>Product Category</h2>
         </div>
-        <div class="row">
-            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">
-                <a href="#">
-                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">
-                    <h4>Product Name</h4>
-                    <h5>£00.00</h5>
-                </a>
-            </div>
-            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">
-                <a href="#">
-                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">
-                    <h4>Product Name</h4>
-                    <h5>£00.00</h5>
-                </a>
-            </div>
-            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">
-                <a href="#">
-                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">
-                    <h4>Product Name</h4>
-                    <h5>£00.00</h5>
-                </a>
-            </div>
-            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">
-                <a href="#">
-                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">
-                    <h4>Product Name</h4>
-                    <h5>£00.00</h5>
-                </a>
-            </div>
-            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">
-                <a href="#">
-                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">
-                    <h4>Product Name</h4>
-                    <h5>£00.00</h5>
-                </a>
-            </div>
-            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">
-                <a href="#">
-                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">
-                    <h4>Product Name</h4>
-                    <h5>£00.00</h5>
-                </a>
-            </div>
-            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">
-                <a href="#">
-                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">
-                    <h4>Product Name</h4>
-                    <h5>£00.00</h5>
-                </a>
-            </div>
-            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">
-                <a href="#">
-                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">
-                    <h4>Product Name</h4>
-                    <h5>£00.00</h5>
-                </a>
-            </div>
-            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
-                <a href="#">
-                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">
-                    <h4>Product Name</h4>
-                    <h5>£00.00</h5>
-                </a>
-            </div>
-            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
-                <a href="#">
-                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">
-                    <h4>Product Name</h4>
-                    <h5>£00.00</h5>
-                </a>
-            </div>
-            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
-                <a href="#">
-                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">
-                    <h4>Product Name</h4>
-                    <h5>£00.00</h5>
-                </a>
-            </div>
-            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">
-                <a href="#">
-                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">
-                    <h4>Product Name</h4>
-                    <h5>£00.00</h5>
-                </a>
-            </div>
-        </div>
+
+            <?php
+            foreach($products as $product) {
+                if($product instanceof Product) { ?>
+                    <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">
+                        <a href="#">
+                            <img class="img-thumbnail" src="../assets/img/cat2.jpg">
+                            <h4><?php echo $product->getProductName(); ?></h4>
+                            <h5>£ <?php echo $product->getProductPrice(); ?></h5>
+                        </a>
+                    </div>
+        <?php
+                }
+            }
+            ?>
+<!--        <div class="row">-->
+<!--            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">-->
+<!--                <a href="#">-->
+<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
+<!--                    <h4>Product Name</h4>-->
+<!--                    <h5>£00.00</h5>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">-->
+<!--                <a href="#">-->
+<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
+<!--                    <h4>Product Name</h4>-->
+<!--                    <h5>£00.00</h5>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">-->
+<!--                <a href="#">-->
+<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
+<!--                    <h4>Product Name</h4>-->
+<!--                    <h5>£00.00</h5>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">-->
+<!--                <a href="#">-->
+<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
+<!--                    <h4>Product Name</h4>-->
+<!--                    <h5>£00.00</h5>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">-->
+<!--                <a href="#">-->
+<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
+<!--                    <h4>Product Name</h4>-->
+<!--                    <h5>£00.00</h5>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">-->
+<!--                <a href="#">-->
+<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
+<!--                    <h4>Product Name</h4>-->
+<!--                    <h5>£00.00</h5>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">-->
+<!--                <a href="#">-->
+<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
+<!--                    <h4>Product Name</h4>-->
+<!--                    <h5>£00.00</h5>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">-->
+<!--                <a href="#">-->
+<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
+<!--                    <h4>Product Name</h4>-->
+<!--                    <h5>£00.00</h5>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">-->
+<!--                <a href="#">-->
+<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
+<!--                    <h4>Product Name</h4>-->
+<!--                    <h5>£00.00</h5>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">-->
+<!--                <a href="#">-->
+<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
+<!--                    <h4>Product Name</h4>-->
+<!--                    <h5>£00.00</h5>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">-->
+<!--                <a href="#">-->
+<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
+<!--                    <h4>Product Name</h4>-->
+<!--                    <h5>£00.00</h5>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">-->
+<!--                <a href="#">-->
+<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
+<!--                    <h4>Product Name</h4>-->
+<!--                    <h5>£00.00</h5>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
     </div>
 </section>
 </body>
