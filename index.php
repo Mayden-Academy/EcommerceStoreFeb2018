@@ -1,11 +1,12 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 use Store\Category as Category;
-use Store\DBConnect as DBConnect;
+use Store\mySqlDbConnect as mySqlDbConnect;
 use Store\Store as Store;
-$dBConnect = DBConnect::connectToDB();
-Store::setPDO($dBConnect);
-$categories = Store::getCategories();
+
+$mySqlCon = new mySqlDbConnect();
+$store = new Store($mySqlCon);
+$categories = $store->getCategories();
 
 ?>
 
@@ -21,17 +22,18 @@ $categories = Store::getCategories();
 </head>
 <body>
 <section class="row banner">
-    <div class="home col-xs-3 col-sm-2">
+    <div class="home col-xs-4 col-sm-2">
         <a href="#">
             <h2>Home</h2>
         </a>
     </div>
-    <div class="shop-name col-xs-9 col-sm-10">
+    <div class="shop-name col-xs-8 col-sm-10">
         <h2>Totally Pawesome</h2>
     </div>
 </section>
 <section class="row main">
-    <div class="sidebar col-xs-3 col-sm-2">
+    <div class="sidebar col-xs-4 col-sm-2">
+
         <?php
         foreach($categories as $category) {
             if($category instanceof Category) { ?>
@@ -43,7 +45,7 @@ $categories = Store::getCategories();
         }
         ?>
     </div>
-    <div class="main-content col-xs-9 col-sm-10">
+    <div class="main-content col-xs-8 col-sm-10">
         <div class="row">
             <h2>Categories</h2>
         </div>

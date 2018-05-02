@@ -2,7 +2,8 @@
 
 namespace Store;
 
-class Category {
+class Category
+{
     private $id;
     private $categoryName;
     private $defaultImageFilePath;
@@ -15,6 +16,7 @@ class Category {
 
     public function getCategoryName() {
         return $this->categoryName;
+
     }
 
     /**
@@ -23,7 +25,7 @@ class Category {
      * @return string
      */
     public function getCategoryImageLink():string {
-        return "<div class=\"col-xs-8 col-sm-4\">
+        return "<div class=\"category col-xs-10 col-sm-6 col-md-4\">
                 <a href='" .
                 $this->path .
                 $this->id .

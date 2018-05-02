@@ -2,15 +2,15 @@
 <?php
 
 require_once '../../vendor/autoload.php';
+use Store\mySqlDbConnect as mySqlDbConnect;
+use Store\Store as Store;
 use Store\Category as Category;
 use Store\Product as Product;
-use Store\DBConnect as DBConnect;
-use Store\Store as Store;
 
-$dBConnect = DBConnect::connectToDB();
-Store::setPDO($dBConnect);
-$categories = Store::getCategories();
-$products = Store::getProducts($_GET['categoryId']);
+$mySqlCon = new mySqlDbConnect();
+$store = new Store($mySqlCon);
+$categories = $store->getCategories();
+$products = $store->getProducts($_GET['categoryId']);
 
 ?>
 
