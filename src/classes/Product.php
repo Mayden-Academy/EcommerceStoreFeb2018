@@ -59,7 +59,7 @@ class Product
         return $this->imageFilePath;
     }
 
-    public function getImages($id)
+    public function getImages($id): array
     {
     $query = $this->db->prepare("SELECT `imageFilePath` FROM `images` WHERE `productId` = :id");
     $query->bindParam(':id', $id);

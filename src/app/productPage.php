@@ -59,15 +59,13 @@ $productImageArray = $product->getImages($id);
             </div>
             <div class="row">
                 <div class="col-xs-6 col-xs-offset-2 col-sm-4 col-sm-offset-1">
-                    <img src="<?php if (array_key_exists(0,$productImageArray)) {
-                        echo $productImageArray[0]["imageFilePath"];
-                    } else echo $product->getImageFilePath()?>" class="img-thumbnail col-xs-6 col-sm-4">
-                    <img src="<?php if (array_key_exists(1,$productImageArray)) {
-                        echo $productImageArray[1]["imageFilePath"];
-                    } else echo $product->getImageFilePath()?>" class="img-thumbnail col-xs-6 col-sm-4">
-                    <img src="<?php if (array_key_exists(2,$productImageArray)) {
-                        echo $productImageArray[2]["imageFilePath"];
-                    } else echo $product->getImageFilePath()?>" class="img-thumbnail col-xs-6 col-sm-4">
+                    <?php foreach($productImageArray as $image) {
+                        echo "<img src='".$image['imageFilePath']. "'class='img-thumbnail col-xs-6 col-sm-4'>";
+                    }
+                    for($i=0; $i<(3-count($productImageArray)); $i++){
+                        echo "<img src='".$product->getImageFilePath(). "'class='img-thumbnail col-xs-6 col-sm-4'>";
+                    }
+                    ?>
                 </div>
             </div>
             <div class="col-xs-6 col-xs-offset-2 col-sm-4 col-sm-offset-1">
