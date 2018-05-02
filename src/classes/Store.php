@@ -1,6 +1,5 @@
 <?php
 namespace Store;
-require_once  '../../vendor/autoload.php';
 use Store\Category as Category;
 use Store\Product as Product;
 use \PDO;
