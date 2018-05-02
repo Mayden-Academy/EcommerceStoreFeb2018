@@ -12,6 +12,8 @@ $categories = $store->getCategories();
 $id = $_GET["productId"];
 $product = $store->getProductPage($id);
 
+$productImageArray  = $product->getImages($id);
+
 ?>
 
 <!DOCTYPE html>
@@ -58,9 +60,14 @@ $product = $store->getProductPage($id);
             </div>
             <div class="row">
                 <div class="col-xs-6 col-xs-offset-2 col-sm-4 col-sm-offset-1">
-                    <img src="<?php echo $product->getImageFilePath()?>" class="img-thumbnail col-xs-6 col-sm-4">
-                    <img src="<?php echo $product->getImageFilePath()?>" class="img-thumbnail col-xs-6 col-sm-4">
-                    <img src="<?php echo $product->getImageFilePath()?>" class="img-thumbnail col-xs-6 col-sm-4">
+                    <?php
+                    foreach(array_slice($productImageArray, 0, min(3, count($productImageArray)-1)) as $productImage){
+                        echo "<img src=\"" . $productImage . "\" class=\"img-thumbnail col-xs-6 col-sm-4\">";
+                    }
+                    ?>
+<!--                    <img src="--><?php //echo $productImageArray[0]?><!--" class="img-thumbnail col-xs-6 col-sm-4">-->
+<!--                    <img src="--><?php //echo $productImageArray[1]?><!--" class="img-thumbnail col-xs-6 col-sm-4">-->
+<!--                    <img src="--><?php //echo $productImageArray[2]?><!--" class="img-thumbnail col-xs-6 col-sm-4">-->
                 </div>
             </div>
             <div class="col-xs-6 col-xs-offset-2 col-sm-4 col-sm-offset-1">
