@@ -24,22 +24,22 @@
 <section class="row main">
     <div class="sidebar col-xs-3 col-sm-2">
         <a href="#">
-            <h4>Category1</h4>
+            <h5>Category1</h5>
         </a>
         <a href="#">
-            <h4>Category2</h4>
+            <h5>Category2</h5>
         </a>
         <a href="#">
-            <h4>Category3</h4>
+            <h5>Category3</h5>
         </a>
         <a href="#">
-            <h4>Category4</h4>
+            <h5>Category4</h5>
         </a>
         <a href="#">
-            <h4>Category5</h4>
+            <h5>Category5</h5>
         </a>
         <a href="#">
-            <h4>Category6</h4>
+            <h5>Category6</h5>
         </a>
     </div>
     <div class="main-content col-xs-9 col-sm-10">
