@@ -10,7 +10,10 @@ use Store\Product as Product;
 $mySqlCon = new mySqlDbConnect();
 $store = new Store($mySqlCon);
 $categories = $store->getCategories();
+$currentCategory = $store->getCurrentCategory($_GET['categoryId']);
 $products = $store->getProducts($_GET['categoryId']);
+
+echo '<pre>' . var_export($currentCategory, true) . '</pre>';
 
 ?>
 
@@ -50,7 +53,7 @@ $products = $store->getProducts($_GET['categoryId']);
     </div>
     <div class="main-content col-xs-9 col-sm-10">
         <div class="row">
-            <h2>Product Category</h2>
+            <h2><?php echo $currentCategory['categoryName']; ?></h2>
         </div>
 
             <?php
