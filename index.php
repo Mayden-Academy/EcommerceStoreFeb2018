@@ -18,19 +18,20 @@ $categories = $store->getCategories();
     <link rel="stylesheet" type="text/css" href="src/assets/css/vendor/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="src/assets/css/styles.css">
 </head>
+
 <body>
 <section class="row banner">
-    <div class="home col-xs-4 col-sm-2">
+    <div class="home col-xs-3 col-sm-2">
         <a href="index.php">
             <h2>Home</h2>
         </a>
     </div>
-    <div class="shop-name col-xs-8 col-sm-10">
+    <div class="shop-name col-xs-9 col-sm-10">
         <h2>Totally Pawesome</h2>
     </div>
 </section>
 <section class="row main">
-    <div class="sidebar col-xs-4 col-sm-2">
+    <div class="sidebar col-xs-3 col-sm-2">
         <?php
         foreach($categories as $category) {
             if($category instanceof Category) {
@@ -39,7 +40,7 @@ $categories = $store->getCategories();
         }
         ?>
     </div>
-    <div class="main-content col-xs-8 col-sm-10">
+    <div class="main-content col-xs-9 col-sm-10">
         <div class="row">
             <h2>Categories</h2>
         </div>
