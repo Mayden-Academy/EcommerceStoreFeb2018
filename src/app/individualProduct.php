@@ -51,22 +51,29 @@ $categories = Store::getCategories();
                 </div>
             </div>
             <div class="row">
-
                 <div class="col-xs-6 col-xs-offset-2 col-sm-4 col-sm-offset-1">
                     <img src="../assets/img/cat2.jpg" class="img-thumbnail col-xs-6 col-sm-4">
                     <img src="../assets/img/cat2.jpg" class="img-thumbnail col-xs-6 col-sm-4">
                     <img src="../assets/img/cat2.jpg" class="img-thumbnail col-xs-6 col-sm-4">
                 </div>
-
             </div>
             <div class="col-xs-6 col-xs-offset-2 col-sm-4 col-sm-offset-1">
                 <div>
                     <strong class="col-xs-12 col-sm-12">Size</strong>
-                    <input class="col-xs-12 col-sm-12" type="text" name="Size">
+                    <select class="col-xs-12 col-sm-12">
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                    </select>
                 </div>
                 <div>
                     <strong class="col-xs-12 col-sm-12">Colour</strong>
-                    <input class="col-xs-12 col-sm-12" type="text" name="Colour">
+                    <select class="col-xs-12 col-sm-12">
+                        <option value="Red">Red</option>
+                        <option value="Green">Green</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Purple">Purple</option>
+                    </select>
                 </div>
             </div>
             <div class="col-xs-12 col-xs-offset-4 col-sm-12 col-sm-offset-2">
