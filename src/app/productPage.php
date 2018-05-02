@@ -2,12 +2,11 @@
 namespace store;
 require_once '../../vendor/autoload.php';
 
-use Store\DBConnect as DBConnect;
+use Store\mySqlDbConnect as mySqlDbConnect;
 use Store\Store as Store;
 
-$dBConnect = DBConnect::connectToDB();
-Store::setPDO($dBConnect);
-$product = Store::getProductPage(1);
+$mySqlCon = new mySqlDbConnect();
+$store = new Store($mySqlCon);
+$product = $store->getProductPage(1);
 
 var_dump($product);
-

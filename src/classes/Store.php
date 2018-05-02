@@ -2,6 +2,7 @@
 namespace Store;
 require_once  '../../vendor/autoload.php';
 use Store\Category as Category;
+use Store\Product as Product;
 use \PDO;
 use Store\interfaces\ConnectToDb;
 use Store\interfaces\GetCategories as GetCategories;
@@ -30,9 +31,11 @@ class Store implements GetCategories, GetProductPageable
     /**
      *Database query to get product data
      *
-     * @return array of objects of product class
+     * @return  Product class object
      */
-    public function getProductPage($id):array {
+
+
+    public function getProductPage($id): Product {
         $query2 = $this->db->prepare("SELECT `products`.`id`, 
         `products`.`productName`, `products`.`productPrice`, `products`.`availableColors`
         ,`products`.`availableSizes`, `products`.`productDescription`,`images`.`imageRef`
@@ -41,7 +44,7 @@ class Store implements GetCategories, GetProductPageable
 
         $query2->bindParam(':idInput', $id);
         $query2->execute();
-        return $query2->fetchAll(PDO::FETCH_CLASS,  'Store\Product');
+        return $query2->fetch(PDO::FETCH_CLASS,  Product::class);
     }
 }
 
