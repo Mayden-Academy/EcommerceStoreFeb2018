@@ -9,8 +9,9 @@ use Store\Product as Product;
 $mySqlCon = new mySqlDbConnect();
 $store = new Store($mySqlCon);
 $categories = $store->getCategories();
-$currentCategory = $store->getCurrentCategory($_GET['categoryId']);
-$products = $store->getProducts($_GET['categoryId']);
+$categoryId = $_GET['categoryId'];
+$currentCategory = $store->getCurrentCategory($categoryId);
+$products = $store->getProducts($categoryId);
 
 ?>
 

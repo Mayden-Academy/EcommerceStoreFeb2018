@@ -55,10 +55,9 @@ $categories = $store->getCategories();
                 if($category instanceof Category) { ?>
                     <div class="col-xs-10 col-sm-6 col-md-4">
                         <a href="./src/app/products.php?categoryId=<?php echo $category->getId(); ?>">
-                            <img
-                                    class="img-thumbnail"
-                                    src="<?php echo $category->getDefaultImageFilePath() ?>"
-                                    alt="<?php echo $category->getDefaultImageAlt();?>"
+                            <img class="img-thumbnail"
+                                 src="<?php echo $category->getDefaultImageFilePath() ?>"
+                                 alt="<?php echo $category->getDefaultImageAlt();?>"
                             >
                             <h4><?php echo $category->getCategoryName(); ?></h4>
                         </a>
