@@ -15,8 +15,8 @@ class Product
     private $imageFilePath;
     private $db;
 
-    public function setDb(PDO $db){
-        $this->db = $db;
+    public function setDb($con){
+        $this->db = $con->ConnectToDb();
     }
 
     public function getId():int
