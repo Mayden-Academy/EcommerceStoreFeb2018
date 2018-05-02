@@ -4,5 +4,5 @@ namespace Store\Interfaces;
 
 interface GetProductPageable
 {
-    public function getProductPage($id);
+    public function getProductPage(int $id);
 }

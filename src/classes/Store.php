@@ -41,7 +41,7 @@ class Store implements GetCategories, GetProductPageable
      * @param $id integer takes the id of the product
      * @return  Product class object
      */
-    public function getProductPage($id): Product
+    public function getProductPage(int $id): Product
     {
         $query = $this->db->prepare("SELECT `products`.`id`, 
         `products`.`productName`, `products`.`productPrice`, `products`.`availableColors`
