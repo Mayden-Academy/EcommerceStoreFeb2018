@@ -41,7 +41,7 @@ class Store implements GetCategories, GetProductPageable
      * @param $id integer takes the id of the product
      * @return  Product class object
      */
-    public function getProductPage($id): Product 
+    public function getProductPage($id): Product
     {
         $query = $this->db->prepare("SELECT `products`.`id`, 
         `products`.`productName`, `products`.`productPrice`, `products`.`availableColors`
@@ -88,6 +88,14 @@ class Store implements GetCategories, GetProductPageable
         $query->setFetchMode(PDO::FETCH_CLASS, Product::class);
         $query->execute();
         return $query->fetchAll(PDO::FETCH_CLASS, Product::class);
+    }
+
+    public function getImages(int $id): array
+    {
+        $query = $this->db->prepare("SELECT `imageFilePath` FROM `images` WHERE `productId` = :id");
+        $query->bindParam(':id', $id);
+        $query->execute();
+        return $query->fetchAll();
     }
 }
 
