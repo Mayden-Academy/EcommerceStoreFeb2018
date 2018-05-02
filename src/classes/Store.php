@@ -3,11 +3,18 @@ namespace Store;
 require_once  '../../vendor/autoload.php';
 use Store\Category as Category;
 use \PDO;
+use Store\interfaces\ConnectToDb;
 use Store\interfaces\GetCategories as GetCategories;
+use Store\interfaces\GetProductPageable as GetProductPageable;
 
-class Store implements GetCategories{
-
+class Store implements GetCategories, GetProductPageable
+{
     private $db;
+
+    public function __construct(ConnectToDb $con)
+    {
+        $this->db = $con->ConnectToDb();
+    }
 
     /**
      *Database query to get category data
@@ -19,10 +26,6 @@ class Store implements GetCategories{
         $query->execute();
         return $query->fetchAll(PDO::FETCH_CLASS, Category::class);
     }
-
-//    public function setPDO(PDO $db){
-//        $this->DB = $db;
-//    }
 
     /**
      *Database query to get product data
@@ -41,6 +44,4 @@ class Store implements GetCategories{
         return $query2->fetchAll(PDO::FETCH_CLASS,  'Store\Product');
     }
 }
-
-
 

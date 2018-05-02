@@ -1,26 +1,48 @@
-main {
-    margin-top: 100px;
-}
-
-nav {
-    background-color: #663399;
-    height: 100px;
-}
-
-aside {
-    height: 100vh;
+html, body {
+    height: 100%;
     background-color: #708090;
 }
 
-aside a {
-    color: #ffffff;
-    padding: 5px;
+.row {
+    margin: 0;
 }
 
-aside a:hover {
-    color: #0000ff;
+.banner {
+    color: #ffffff;
 }
 
-nav h1 {
+a:hover {
+    text-decoration: none;
+}
+
+.banner a, .sidebar a {
     color: #ffffff;
+}
+
+.banner a:hover, .sidebar a:hover {
+    color: #663399;
+}
+
+.shop-name {
+    background-color: #663399;
+}
+
+.sidebar h5 {
+    padding-top: 10px;
+}
+
+.main-content {
+    background-color: #ffffff;
+}
+
+.index-tiles {
+    height: 100vh;
+}
+
+.product a, .category a {
+    color: #663399;
+}
+
+.product a:hover, .category a:hover {
+    color: #fb8c00;
 }
