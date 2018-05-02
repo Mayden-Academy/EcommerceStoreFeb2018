@@ -24,7 +24,7 @@ html, body {
     background-color: #663399;
 }
 
-.sidebar h4 {
+.sidebar h5 {
     padding-top: 10px;
 }
 
@@ -32,7 +32,7 @@ html, body {
     background-color: #ffffff;
 }
 
-.index-tiles {
+.index-tiles, .product-content {
     height: 100vh;
 }
 
