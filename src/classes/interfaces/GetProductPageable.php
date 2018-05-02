@@ -1,8 +1,8 @@
 <?php
 
-namespace Store\interfaces;
+namespace Store\Interfaces;
 
 interface GetProductPageable
 {
-    public function getProductPage();
+    public function getProductPage(int $id);
 }
