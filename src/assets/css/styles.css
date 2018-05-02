@@ -1,0 +1,48 @@
+html, body {
+    height: 100%;
+    background-color: #708090;
+}
+
+.row {
+    margin: 0;
+}
+
+.banner {
+    color: #ffffff;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.banner a, .sidebar a {
+    color: #ffffff;
+}
+
+.banner a:hover, .sidebar a:hover {
+    color: #663399;
+}
+
+.shop-name {
+    background-color: #663399;
+}
+
+.sidebar h5 {
+    padding-top: 10px;
+}
+
+.main-content {
+    background-color: #ffffff;
+}
+
+.index-tiles {
+    height: 100vh;
+}
+
+.product a, .category a {
+    color: #663399;
+}
+
+.product a:hover, .category a:hover {
+    color: #fb8c00;
+}
