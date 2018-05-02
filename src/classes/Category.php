@@ -18,9 +18,9 @@ class Category {
         return "<a href='" .
             $this->path .
             $this->id .
-            "' ><h4>" .
+            "' ><h5>" .
             $this->categoryName .
-            "</h4></a><br>";
+            "</h5></a><br>";
     }
 
     /**
@@ -29,7 +29,7 @@ class Category {
      * @return string
      */
     public function getCategoryImageLink():string {
-        return "<div class=\"col-xs-8 col-sm-4\">
+        return "<div class=\"category col-xs-10 col-sm-6 col-md-4\">
                 <a href='" .
                 $this->path .
                 $this->id .
