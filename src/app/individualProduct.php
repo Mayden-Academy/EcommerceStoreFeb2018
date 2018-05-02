@@ -1,11 +1,17 @@
 <?php
 require_once '../../vendor/autoload.php';
 use Store\Category as Category;
-use Store\DBConnect as DBConnect;
+use Store\mySqlDbConnect as mySqlDbConnect;
 use Store\Store as Store;
-$dBConnect = DBConnect::connectToDB();
-Store::setPDO($dBConnect);
-$categories = Store::getCategories();
+
+$mySqlCon = new mySqlDbConnect();
+$store = new Store($mySqlCon);
+$categories = $store->getCategories();
+
+
+$id = $_GET["productId"];
+$product = $store->getProductPage($id);
+
 ?>
 
 <!DOCTYPE html>
@@ -42,47 +48,46 @@ $categories = Store::getCategories();
     </div>
     <div class="main-content col-xs-9 col-sm-10">
         <div class="row col-xs-offset-4">
-            <h2>Product Name</h2>
+            <h2><?php echo $product->getProductName()?></h2>
         </div>
         <div class="product-content">
             <div class="row">
                 <div>
-                    <img src="../assets/img/cat2.jpg" class="col-xs-6 col-xs-offset-2 col-sm-4 col-sm-offset-1">
+                    <img src="<?php echo $product->getImageFilePath()?>" class="col-xs-6 col-xs-offset-2 col-sm-4 col-sm-offset-1">
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-6 col-xs-offset-2 col-sm-4 col-sm-offset-1">
-                    <img src="../assets/img/cat2.jpg" class="img-thumbnail col-xs-6 col-sm-4">
-                    <img src="../assets/img/cat2.jpg" class="img-thumbnail col-xs-6 col-sm-4">
-                    <img src="../assets/img/cat2.jpg" class="img-thumbnail col-xs-6 col-sm-4">
+                    <img src="<?php echo $product->getImageFilePath()?>" class="img-thumbnail col-xs-6 col-sm-4">
+                    <img src="<?php echo $product->getImageFilePath()?>" class="img-thumbnail col-xs-6 col-sm-4">
+                    <img src="<?php echo $product->getImageFilePath()?>" class="img-thumbnail col-xs-6 col-sm-4">
                 </div>
             </div>
             <div class="col-xs-6 col-xs-offset-2 col-sm-4 col-sm-offset-1">
                 <div>
                     <strong class="col-xs-12 col-sm-12">Size</strong>
                     <select class="col-xs-12 col-sm-12">
-                        <option value="Small">Small</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Large">Large</option>
+                        <?php foreach ($product->getAvailableSizes() as $size){
+                            echo "<option value=\"". $size ."\">" . $size . "</option>";
+                        } ?>
                     </select>
                 </div>
                 <div>
                     <strong class="col-xs-12 col-sm-12">Colour</strong>
                     <select class="col-xs-12 col-sm-12">
-                        <option value="Red">Red</option>
-                        <option value="Green">Green</option>
-                        <option value="Blue">Blue</option>
-                        <option value="Purple">Purple</option>
+                        <?php foreach ($product->getAvailableColors() as $color){
+                            echo "<option value=\"". $color ."\">" . $color . "</option>";
+                        } ?>
                     </select>
                 </div>
             </div>
             <div class="col-xs-12 col-xs-offset-4 col-sm-12 col-sm-offset-2">
                 <h5>Description</h5>
-                <p>lorem epsum</p>
+                <p><?php echo $product->getProductDescription()?></p>
             </div>
             <div class="col-xs-12 col-xs-offset-4 col-sm-12 col-sm-offset-2">
                 <span>Cost</span>
-                <span>£5</span>
+                <span>£<?php echo $product->getProductPrice()?></span>
             </div>
         </div>
     </div>
