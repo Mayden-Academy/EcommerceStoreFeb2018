@@ -10,11 +10,11 @@ $categories = $store->getCategories();
 
 $id = $_GET["productId"];
 
-$product = $store->getProductPage(5);
+$product = $store->getProductPage($id);
 
 $product->setDb($mySqlCon);
 $productImageArray = $product->getImages($id);
-//var_dump($productImageArray);
+var_dump($product->getAvailableColors());
 ?>
 
 <!DOCTYPE html>
@@ -79,17 +79,17 @@ $productImageArray = $product->getImages($id);
                 <div>
                     <strong class="col-xs-12 col-sm-12">Size</strong>
                     <select class="col-xs-12 col-sm-12">
-                        <?php foreach ($product->getAvailableSizes() as $size){
-                            echo "<option value=\"". $size ."\">" . $size . "</option>";
-                        } ?>
+                        <option value="small">Small</option>
+                        <option value="med">Medium</option>
+                        <option value="lrg">Large</option>
                     </select>
                 </div>
                 <div>
                     <strong class="col-xs-12 col-sm-12">Colour</strong>
                     <select class="col-xs-12 col-sm-12">
-                        <?php foreach ($product->getAvailableColors() as $color){
-                            echo "<option value=\"". $color ."\">" . $color . "</option>";
-                        } ?>
+                        <option value="blue">Blue</option>
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
                     </select>
                 </div>
             </div>
