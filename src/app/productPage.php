@@ -61,7 +61,7 @@ $productImageArray = $store->getImages($id);
                     <?php foreach($productImageArray as $image) {
                         echo "<img src='".$image['imageFilePath']. "'class='img-thumbnail col-xs-6 col-sm-4'>";
                     }
-                    for($i=0; $i<(3-count($productImageArray)); $i++){
+                    for($i=0 ; $i<min(3, count($productImageArray)) ; $i++){
                         echo "<img src='".$product->getImageFilePath(). "'class='img-thumbnail col-xs-6 col-sm-4'>";
                     }
                     ?>
