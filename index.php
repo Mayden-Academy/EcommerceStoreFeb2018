@@ -3,9 +3,9 @@ require_once __DIR__ . '/vendor/autoload.php';
 use Store\Category as Category;
 use Store\mySqlDbConnect as mySqlDbConnect;
 use Store\Store as Store;
-$mySqlDbConnect = mySqlDbConnect::connectToDB();
-Store::setPDO($mySqlDbConnect);
-$categories = Store::getCategories();
+$mySqlCon = new mySqlDbConnect();
+$store = new Store($mySqlCon);
+$categories = $store->getCategories();
 ?>
 
 <!DOCTYPE html>

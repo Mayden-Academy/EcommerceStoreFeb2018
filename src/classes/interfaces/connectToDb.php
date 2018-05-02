@@ -4,5 +4,5 @@ namespace Store\interfaces;
 
 interface ConnectToDb
 {
-    public static function ConnectToDb();
+    public function ConnectToDb();
 }
