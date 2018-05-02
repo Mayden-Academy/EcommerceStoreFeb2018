@@ -8,10 +8,8 @@ $mySqlCon = new mySqlDbConnect();
 $store = new Store($mySqlCon);
 $categories = $store->getCategories();
 
-
 $id = $_GET["productId"];
 $product = $store->getProductPage($id);
-
 $productImageArray  = $product->getImages($id);
 
 ?>

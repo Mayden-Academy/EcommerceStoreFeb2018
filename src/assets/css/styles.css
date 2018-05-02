@@ -6,13 +6,12 @@ html, body {
     margin: 0;
 }
 
-.banner {
-    color: #ffffff;
+a:hover {
+    text-decoration: none;
 }
 
-.banner a, .sidebar a {
+.banner a, .banner, .sidebar a {
     color: #ffffff;
-    text-decoration: none;
 }
 
 .banner a:hover, .sidebar a:hover {
@@ -37,7 +36,6 @@ html, body {
 
 .product a, .category a {
     color: #663399;
-    text-decoration: none;
 }
 
 .product a:hover, .category a:hover {

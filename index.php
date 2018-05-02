@@ -1,11 +1,11 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 use Store\Category as Category;
-use Store\DBConnect as DBConnect;
+use Store\mySqlDbConnect as mySqlDbConnect;
 use Store\Store as Store;
-$dBConnect = DBConnect::connectToDB();
-Store::setPDO($dBConnect);
-$categories = Store::getCategories();
+$mySqlCon = new mySqlDbConnect();
+$store = new Store($mySqlCon);
+$categories = $store->getCategories();
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ $categories = Store::getCategories();
 <body>
 <section class="row banner">
     <div class="home col-xs-3 col-sm-2">
-        <a href="#">
+        <a href="index.php">
             <h2>Home</h2>
         </a>
     </div>
