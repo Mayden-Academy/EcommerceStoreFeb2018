@@ -10,7 +10,7 @@ use Store\Store as Store;
 $dBConnect = DBConnect::connectToDB();
 Store::setPDO($dBConnect);
 $categories = Store::getCategories();
-$products = Store::getProducts($_GET['id']);
+$products = Store::getProducts($_GET['categoryId']);
 
 ?>
 
@@ -54,7 +54,7 @@ $products = Store::getProducts($_GET['id']);
             foreach($products as $product) {
                 if($product instanceof Product) { ?>
                     <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">
-                        <a href="#">
+                        <a href="/EcommerceStoreFeb2018/src/app/productPage.php?productId=<?php echo $product->getId(); ?>">
                             <img class="img-thumbnail" src="../assets/img/cat2.jpg">
                             <h4><?php echo $product->getProductName(); ?></h4>
                             <h5>£ <?php echo $product->getProductPrice(); ?></h5>
@@ -64,92 +64,6 @@ $products = Store::getProducts($_GET['id']);
                 }
             }
             ?>
-<!--        <div class="row">-->
-<!--            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">-->
-<!--                <a href="#">-->
-<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
-<!--                    <h4>Product Name</h4>-->
-<!--                    <h5>£00.00</h5>-->
-<!--                </a>-->
-<!--            </div>-->
-<!--            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">-->
-<!--                <a href="#">-->
-<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
-<!--                    <h4>Product Name</h4>-->
-<!--                    <h5>£00.00</h5>-->
-<!--                </a>-->
-<!--            </div>-->
-<!--            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">-->
-<!--                <a href="#">-->
-<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
-<!--                    <h4>Product Name</h4>-->
-<!--                    <h5>£00.00</h5>-->
-<!--                </a>-->
-<!--            </div>-->
-<!--            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">-->
-<!--                <a href="#">-->
-<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
-<!--                    <h4>Product Name</h4>-->
-<!--                    <h5>£00.00</h5>-->
-<!--                </a>-->
-<!--            </div>-->
-<!--            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">-->
-<!--                <a href="#">-->
-<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
-<!--                    <h4>Product Name</h4>-->
-<!--                    <h5>£00.00</h5>-->
-<!--                </a>-->
-<!--            </div>-->
-<!--            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">-->
-<!--                <a href="#">-->
-<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
-<!--                    <h4>Product Name</h4>-->
-<!--                    <h5>£00.00</h5>-->
-<!--                </a>-->
-<!--            </div>-->
-<!--            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">-->
-<!--                <a href="#">-->
-<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
-<!--                    <h4>Product Name</h4>-->
-<!--                    <h5>£00.00</h5>-->
-<!--                </a>-->
-<!--            </div>-->
-<!--            <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">-->
-<!--                <a href="#">-->
-<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
-<!--                    <h4>Product Name</h4>-->
-<!--                    <h5>£00.00</h5>-->
-<!--                </a>-->
-<!--            </div>-->
-<!--            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">-->
-<!--                <a href="#">-->
-<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
-<!--                    <h4>Product Name</h4>-->
-<!--                    <h5>£00.00</h5>-->
-<!--                </a>-->
-<!--            </div>-->
-<!--            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">-->
-<!--                <a href="#">-->
-<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
-<!--                    <h4>Product Name</h4>-->
-<!--                    <h5>£00.00</h5>-->
-<!--                </a>-->
-<!--            </div>-->
-<!--            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">-->
-<!--                <a href="#">-->
-<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
-<!--                    <h4>Product Name</h4>-->
-<!--                    <h5>£00.00</h5>-->
-<!--                </a>-->
-<!--            </div>-->
-<!--            <div class="product col-xs-8 col-sm-6 col-md-4 col-lg-3">-->
-<!--                <a href="#">-->
-<!--                    <img class="img-thumbnail" src="../assets/img/cat2.jpg">-->
-<!--                    <h4>Product Name</h4>-->
-<!--                    <h5>£00.00</h5>-->
-<!--                </a>-->
-<!--            </div>-->
-<!--        </div>-->
     </div>
 </section>
 </body>

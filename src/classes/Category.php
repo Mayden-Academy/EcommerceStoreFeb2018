@@ -7,7 +7,7 @@ class Category {
     private $categoryName;
     private $defaultImageFilePath;
     private $defaultImageAlt;
-    private $path = "/EcommerceStoreFeb2018/src/app/products.php?id=";
+    private $path = "/EcommerceStoreFeb2018/src/app/products.php?categoryId=";
 
     /**
      * Generates html for category list.
