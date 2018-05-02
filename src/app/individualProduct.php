@@ -10,6 +10,7 @@ $categories = $store->getCategories();
 
 $id = $_GET["productId"];
 $product = $store->getProductPage($id);
+$product->setDb($mySqlCon);
 $productImageArray  = $product->getImages($id);
 
 ?>
