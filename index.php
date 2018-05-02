@@ -3,9 +3,11 @@ require_once __DIR__ . '/vendor/autoload.php';
 use Store\Category as Category;
 use Store\mySqlDbConnect as mySqlDbConnect;
 use Store\Store as Store;
+
 $mySqlCon = new mySqlDbConnect();
 $store = new Store($mySqlCon);
 $categories = $store->getCategories();
+
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +20,6 @@ $categories = $store->getCategories();
     <link rel="stylesheet" type="text/css" href="src/assets/css/vendor/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="src/assets/css/styles.css">
 </head>
-
 <body>
 <section class="row banner">
     <div class="home col-xs-4 col-sm-2">
@@ -32,10 +33,14 @@ $categories = $store->getCategories();
 </section>
 <section class="row main">
     <div class="sidebar col-xs-4 col-sm-2">
+
         <?php
         foreach($categories as $category) {
-            if($category instanceof Category) {
-                echo $category->getCategoryListLink();
+            if($category instanceof Category) { ?>
+                <a href="./src/app/products.php?categoryId=<?php echo $category->getId(); ?>">
+                    <h4><?php echo $category->getCategoryName(); ?></h4>
+                </a>
+                <?php
             }
         }
         ?>
@@ -47,8 +52,18 @@ $categories = $store->getCategories();
         <div class="row index-tiles">
             <?php
             foreach($categories as $category) {
-                if($category instanceof Category) {
-                    echo $category->getCategoryImageLink();
+                if($category instanceof Category) { ?>
+                    <div class="col-xs-10 col-sm-6 col-md-4">
+                        <a href="./src/app/products.php?categoryId=<?php echo $category->getId(); ?>">
+                            <img
+                                    class="img-thumbnail"
+                                    src="<?php echo $category->getDefaultImageFilePath() ?>"
+                                    alt="<?php echo $category->getDefaultImageAlt();?>"
+                            >
+                            <h4><?php echo $category->getCategoryName(); ?></h4>
+                        </a>
+                    </div>
+            <?php
                 }
             }
             ?>
