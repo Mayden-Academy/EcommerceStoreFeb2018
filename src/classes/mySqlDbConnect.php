@@ -4,7 +4,7 @@ namespace Store;
 
 use \PDO;
 use \Exception;
-use Store\interfaces\ConnectToDb;
+use Store\Interfaces\ConnectToDb;
 
 class mySqlDbConnect implements ConnectToDb {
     private $db;
