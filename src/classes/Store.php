@@ -5,7 +5,8 @@ use Store\Category as Category;
 use \PDO;
 use Store\interfaces\GetCategories as GetCategories;
 
-class Store implements GetCategories{
+class Store implements GetCategories
+{
 
     static private $db;
 

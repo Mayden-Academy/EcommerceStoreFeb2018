@@ -4,14 +4,16 @@ namespace Store;
 
 use \PDO;
 use \Exception;
+use Store\interfaces\ConnectToDb;
 
-class DBConnect {
+class mySqlDbConnect implements ConnectToDb {
     /**
      *Connects to DB using PDO
      *
      * return PDO or String depending on connection success
      */
-    public static function connectToDB() {
+    public static function connectToDB()
+    {
         try{
             return new PDO('mysql:host=127.0.0.1; dbname=ecommerce-shop', 'root');
         } catch (Exception $e) {

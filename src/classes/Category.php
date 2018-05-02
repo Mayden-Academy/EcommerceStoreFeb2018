@@ -2,7 +2,8 @@
 
 namespace Store;
 
-class Category {
+class Category
+{
     private $id;
     private $categoryName;
     private $defaultImageFilePath;
