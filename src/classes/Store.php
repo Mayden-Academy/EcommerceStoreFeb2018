@@ -42,6 +42,5 @@ class Store implements GetCategories{
     }
 }
 
-//var_dump(Store::getProductPage(5));
 
 

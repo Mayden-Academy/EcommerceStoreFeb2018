@@ -2,7 +2,6 @@
 namespace store;
 require_once '../../vendor/autoload.php';
 
-use Store\Product as Product;
 use Store\DBConnect as DBConnect;
 use Store\Store as Store;
 
