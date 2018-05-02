@@ -38,7 +38,7 @@ class Store implements GetCategories{
                                      FROM products 
                                      LEFT JOIN images 
                                      ON products.id = images.productId
-                                     WHERE categoryId = 1
+                                     WHERE categoryId = :categoryId
                                      AND products.deleted = 0");
 
         $query->bindParam(':categoryId', $categoryId);

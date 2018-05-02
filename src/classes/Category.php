@@ -9,18 +9,12 @@ class Category {
     private $defaultImageAlt;
     private $path = "./src/app/products.php?categoryId=";
 
-    /**
-     * Generates html for category list.
-     *
-     * @return string
-     */
-    public function getCategoryListLink():string {
-        return "<a href='" .
-            $this->path .
-            $this->id .
-            "' ><h4>" .
-            $this->categoryName .
-            "</h4></a><br>";
+    public function getId() {
+        return $this->id;
+    }
+
+    public function getCategoryName() {
+        return $this->categoryName;
     }
 
     /**

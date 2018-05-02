@@ -39,8 +39,11 @@ $products = Store::getProducts($_GET['categoryId']);
     <div class="sidebar col-xs-3 col-sm-2">
         <?php
         foreach($categories as $category) {
-            if($category instanceof Category) {
-                echo $category->getCategoryListLink();
+            if($category instanceof Category) { ?>
+                <a href="./products.php?categoryId=<?php echo $category->getId(); ?>">
+                    <h4><?php echo $category->getCategoryName(); ?></h4>
+                </a>
+        <?php
             }
         }
         ?>
