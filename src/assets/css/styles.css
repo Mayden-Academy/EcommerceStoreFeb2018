@@ -11,9 +11,12 @@ html, body {
     color: #ffffff;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 .banner a, .sidebar a {
     color: #ffffff;
-    text-decoration: none;
 }
 
 .banner a:hover, .sidebar a:hover {
@@ -24,7 +27,7 @@ html, body {
     background-color: #663399;
 }
 
-.sidebar h4 {
+.sidebar h5 {
     padding-top: 10px;
 }
 
@@ -38,7 +41,6 @@ html, body {
 
 .product a, .category a {
     color: #663399;
-    text-decoration: none;
 }
 
 .product a:hover, .category a:hover {
