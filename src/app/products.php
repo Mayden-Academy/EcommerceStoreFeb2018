@@ -27,7 +27,7 @@ $products = $store->getProducts($_GET['categoryId']);
 <body>
 <section class="row banner">
     <div class="home col-xs-3 col-sm-2">
-        <a href="#">
+        <a href="../../index.php">
             <h2>Home</h2>
         </a>
     </div>
