@@ -55,7 +55,7 @@ $products = Store::getProducts($_GET['categoryId']);
                 if($product instanceof Product) { ?>
                     <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">
                         <a href="/EcommerceStoreFeb2018/src/app/productPage.php?productId=<?php echo $product->getId(); ?>">
-                            <img class="img-thumbnail" src="../assets/img/cat2.jpg">
+                            <img class="img-thumbnail" src="<?php echo $product->getImageFilePath(); ?>">
                             <h4><?php echo $product->getProductName(); ?></h4>
                             <h5>£ <?php echo $product->getProductPrice(); ?></h5>
                         </a>

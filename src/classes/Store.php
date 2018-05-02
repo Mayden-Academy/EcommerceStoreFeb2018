@@ -34,11 +34,12 @@ class Store implements GetCategories{
      * @return array array of objects of products class
      */
     public static function getProducts($categoryId):array {
-        $query = self::$DB->prepare("
-            SELECT `id`, `categoryId`, `productName`, `productPrice`, `productDescription`, `availableSizes`, `availableColors`, `deleted`
-            FROM products 
-            WHERE categoryId = :categoryId
-            AND `deleted` = 0");
+        $query = self::$DB->prepare("SELECT products.id, products.productName, products.productPrice, products.productDescription, products.availableSizes, products.availableColors, images.imageFilePath
+                                     FROM products 
+                                     LEFT JOIN images 
+                                     ON products.id = images.productId
+                                     WHERE categoryId = 1
+                                     AND products.deleted = 0");
 
         $query->bindParam(':categoryId', $categoryId);
         $query->execute();

@@ -12,7 +12,7 @@ class Product
     private $productDescription;
     private $availableSizes;
     private $availableColors;
-    private $deleted;
+    private $imageFilePath;
 
     public function getId()
     {
@@ -47,6 +47,11 @@ class Product
     public function getAvailableColors()
     {
         return $this->availableColors;
+    }
+
+    public function getImageFilePath()
+    {
+        return $this->imageFilePath;
     }
 
 }
