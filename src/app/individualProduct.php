@@ -41,24 +41,42 @@ $categories = Store::getCategories();
         ?>
     </div>
     <div class="main-content col-xs-9 col-sm-10">
-        <div class="row">
-            <h2 class="text-center">Product Name</h2>
+        <div class="row col-xs-offset-4">
+            <h2>Product Name</h2>
         </div>
-        <div class="row index-tiles">
-            <div>
-                <img src="../assets/img/cat2.jpg" class="center-block">
+        <div class="product-content">
+            <div class="row">
+                <div>
+                    <img src="../assets/img/cat2.jpg" class="col-xs-6 col-xs-offset-2 col-sm-4 col-sm-offset-1">
+                </div>
             </div>
-            <div class="row col-xs-12  ">
-                    <img src="../assets/img/cat2.jpg">
-                    <img src="../assets/img/cat2.jpg" >
-                    <img src="../assets/img/cat2.jpg">
+            <div class="row">
+
+                <div class="col-xs-6 col-xs-offset-2 col-sm-4 col-sm-offset-1">
+                    <img src="../assets/img/cat2.jpg" class="img-thumbnail col-xs-6 col-sm-4">
+                    <img src="../assets/img/cat2.jpg" class="img-thumbnail col-xs-6 col-sm-4">
+                    <img src="../assets/img/cat2.jpg" class="img-thumbnail col-xs-6 col-sm-4">
+                </div>
+
             </div>
-            <div class="col-xs-12">
-                <input type="text" name="Size">
-                <input type="text" name="Colour">
+            <div class="col-xs-6 col-xs-offset-2 col-sm-4 col-sm-offset-1">
+                <div>
+                    <strong class="col-xs-12 col-sm-12">Size</strong>
+                    <input class="col-xs-12 col-sm-12" type="text" name="Size">
+                </div>
+                <div>
+                    <strong class="col-xs-12 col-sm-12">Colour</strong>
+                    <input class="col-xs-12 col-sm-12" type="text" name="Colour">
+                </div>
             </div>
-            <p></p>
-            <h5></h5>
+            <div class="col-xs-12 col-xs-offset-4 col-sm-12 col-sm-offset-2">
+                <h5>Description</h5>
+                <p>lorem epsum</p>
+            </div>
+            <div class="col-xs-12 col-xs-offset-4 col-sm-12 col-sm-offset-2">
+                <span>Cost</span>
+                <span>£5</span>
+            </div>
         </div>
     </div>
 </section>
