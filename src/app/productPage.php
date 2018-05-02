@@ -7,14 +7,10 @@ use Store\Category as Category;
 $mySqlCon = new mySqlDbConnect();
 $store = new Store($mySqlCon);
 $categories = $store->getCategories();
-
 $id = $_GET["productId"];
-
 $product = $store->getProductPage($id);
-
 $product->setDb($mySqlCon);
 $productImageArray = $product->getImages($id);
-var_dump($product->getAvailableColors());
 ?>
 
 <!DOCTYPE html>
@@ -27,11 +23,10 @@ var_dump($product->getAvailableColors());
     <link rel="stylesheet" type="text/css" href="../assets/css/vendor/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
 </head>
-
 <body>
 <section class="row banner">
     <div class="home col-xs-3 col-sm-2">
-        <a href="#">
+        <a href="../../index.php">
             <h2>Home</h2>
         </a>
     </div>
