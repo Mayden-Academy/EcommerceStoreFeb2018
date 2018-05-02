@@ -9,20 +9,23 @@ class Category
     private $defaultImageFilePath;
     private $defaultImageAlt;
 
-    public function getId() {
+    public function getId():int
+    {
         return $this->id;
     }
 
-    public function getCategoryName() {
+    public function getCategoryName():string
+    {
         return $this->categoryName;
     }
 
-    public function getDefaultImageFilePath() {
+    public function getDefaultImageFilePath():string
+    {
         return $this->defaultImageFilePath;
     }
 
-    public function getDefaultImageAlt() {
+    public function getDefaultImageAlt():string
+    {
         return $this->defaultImageAlt;
     }
-
 }

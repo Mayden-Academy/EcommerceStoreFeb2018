@@ -1,4 +1,3 @@
-
 <?php
 
 require_once '../../vendor/autoload.php';
@@ -53,7 +52,6 @@ $products = $store->getProducts($_GET['categoryId']);
         <div class="row">
             <h2><?php echo $currentCategory['categoryName']; ?></h2>
         </div>
-
             <?php
             foreach($products as $product) {
                 if($product instanceof Product) { ?>
@@ -64,7 +62,7 @@ $products = $store->getProducts($_GET['categoryId']);
                             <h5>£ <?php echo $product->getProductPrice(); ?></h5>
                         </a>
                     </div>
-        <?php
+            <?php
                 }
             }
             ?>

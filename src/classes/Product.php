@@ -14,49 +14,43 @@ class Product
     private $availableColors;
     private $imageFilePath;
 
-    public function getId()
+    public function getId():int
     {
         return $this->id;
     }
 
-    public function getCategoryId()
+    public function getCategoryId():float
     {
         return $this->categoryId;
     }
 
-    public function getProductName()
+    public function getProductName():string
     {
         return $this->productName;
     }
 
-    public function getProductPrice()
+    public function getProductPrice():float
     {
         return $this->productPrice;
     }
 
-    public function getProductDescription()
+    public function getProductDescription():string
     {
         return $this->productDescription;
     }
 
-    public function getAvailableSizes()
+    public function getAvailableSizes():string
     {
         return $this->availableSizes;
     }
 
-    public function getAvailableColors()
+    public function getAvailableColors():string
     {
         return $this->availableColors;
     }
 
-    public function getImageFilePath()
+    public function getImageFilePath():string
     {
         return $this->imageFilePath;
     }
-
 }
-
-?>
-
-
-
