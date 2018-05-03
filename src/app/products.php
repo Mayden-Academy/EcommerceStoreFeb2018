@@ -28,7 +28,7 @@ $products = $store->getProducts($categoryId);
 <body>
 <section class="row banner">
     <div class="home col-xs-3 col-sm-2">
-        <a href="#">
+        <a href="../../index.php">
             <h2>Home</h2>
         </a>
     </div>
@@ -55,9 +55,9 @@ $products = $store->getProducts($categoryId);
         </div>
             <?php
             foreach($products as $product) {
-                if($product instanceof Product) { ?>
+                if($product instanceof Product) {?>
                     <div class="product col-xs-10 col-sm-6 col-md-4 col-lg-3">
-                        <a href="./src/app/productPage.php?productId=<?php echo $product->getId(); ?>">
+                        <a href="productPage.php?productId=<?php echo $product->getId(); ?>">
                             <img class="img-thumbnail" src="<?php echo $product->getImageFilePath(); ?>">
                             <h4><?php echo $product->getProductName(); ?></h4>
                             <h5>£ <?php echo $product->getProductPrice(); ?></h5>

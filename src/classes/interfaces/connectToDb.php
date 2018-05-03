@@ -1,6 +1,6 @@
 <?php
 
-namespace Store\interfaces;
+namespace Store\Interfaces;
 
 interface ConnectToDb
 {

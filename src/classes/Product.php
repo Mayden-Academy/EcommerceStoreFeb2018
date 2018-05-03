@@ -1,7 +1,6 @@
 <?php
 
 namespace Store;
-use \PDO;
 
 class Product
 {

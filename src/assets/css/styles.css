@@ -1,5 +1,4 @@
 html, body {
-    height: 100%;
     background-color: #708090;
 }
 
@@ -7,15 +6,11 @@ html, body {
     margin: 0;
 }
 
-.banner {
-    color: #ffffff;
-}
-
 a:hover {
     text-decoration: none;
 }
 
-.banner a, .sidebar a {
+.banner a, .banner, .sidebar a {
     color: #ffffff;
 }
 
@@ -35,7 +30,7 @@ a:hover {
     background-color: #ffffff;
 }
 
-.index-tiles {
+.index-tiles, .product-content {
     height: 100vh;
 }
 
@@ -45,4 +40,8 @@ a:hover {
 
 .product a:hover, .category a:hover {
     color: #fb8c00;
+}
+
+.description{
+    width:300px;
 }

@@ -1,13 +1,13 @@
 <?php
-
 namespace Store;
-use Store\interfaces\ConnectToDb;
-use \PDO;
 use Store\Category as Category;
 use Store\Product as Product;
-use Store\interfaces\GetCategories as GetCategories;
+use \PDO;
+use Store\Interfaces\ConnectToDb;
+use Store\Interfaces\GetCategories as GetCategories;
+use Store\Interfaces\GetProductPageable as GetProductPageable;
 
-class Store implements GetCategories
+class Store implements GetCategories, GetProductPageable
 {
     private $db;
 
@@ -26,12 +26,32 @@ class Store implements GetCategories
      *
      * @return array array of objects of category class
      */
-    public function getCategories():array
+
+    public function getCategories(): array
     {
         $query = $this->db->prepare("SELECT `id`, `categoryName`, `defaultImageFilePath`,`defaultImageAlt` FROM `categories` WHERE `deleted` = 0;");
         $query->setFetchMode(PDO::FETCH_CLASS, Category::class);
         $query->execute();
         return $query->fetchAll();
+    }
+
+    /**
+     *Database query to get product data
+     *
+     * @param $id integer takes the id of the product
+     * @return  Product class object
+     */
+    public function getProductPage(int $id): Product
+    {
+        $query = $this->db->prepare("SELECT `products`.`id`, 
+        `products`.`productName`, `products`.`productPrice`, `products`.`availableColors`
+        ,`products`.`availableSizes`, `products`.`productDescription`,`images`.`imageFilePath`
+          FROM `products` LEFT JOIN `images` ON `products`.`id` = `images`.`productId`
+        WHERE `products`.`id`=:idInput;");
+        $query->setFetchMode(PDO::FETCH_CLASS, Product::class);
+        $query->bindParam(':idInput', $id);
+        $query->execute();
+        return $query->fetch();
     }
 
     /**
@@ -70,4 +90,12 @@ class Store implements GetCategories
         return $query->fetchAll(PDO::FETCH_CLASS, Product::class);
     }
 
+    public function getImages(int $id): array
+    {
+        $query = $this->db->prepare("SELECT `imageFilePath` FROM `images` WHERE `productId` = :id");
+        $query->bindParam(':id', $id);
+        $query->execute();
+        return $query->fetchAll();
+    }
 }
+
