@@ -41,3 +41,7 @@ a:hover {
 .product a:hover, .category a:hover {
     color: #fb8c00;
 }
+
+.description{
+    width:300px;
+}

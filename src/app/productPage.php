@@ -87,7 +87,7 @@ $productImageArray = $store->getImages($id);
             </div>
             <div class="col-xs-12 col-xs-offset-2 col-sm-12 col-sm-offset-1">
                 <h5>Description</h5>
-                <p><?php echo $product->getProductDescription()?></p>
+                <p class="description"><?php echo $product->getProductDescription()?></p>
             </div>
             <div class="col-xs-12 col-xs-offset-2 col-sm-12 col-sm-offset-1">
                 <span>Cost</span>
