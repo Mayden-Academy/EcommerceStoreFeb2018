@@ -85,11 +85,11 @@ $productImageArray = $store->getImages($id);
                     </select>
                 </div>
             </div>
-            <div class="col-xs-12 col-xs-offset-4 col-sm-12 col-sm-offset-2">
+            <div class="col-xs-12 col-xs-offset-2 col-sm-12 col-sm-offset-1">
                 <h5>Description</h5>
                 <p><?php echo $product->getProductDescription()?></p>
             </div>
-            <div class="col-xs-12 col-xs-offset-4 col-sm-12 col-sm-offset-2">
+            <div class="col-xs-12 col-xs-offset-2 col-sm-12 col-sm-offset-1">
                 <span>Cost</span>
                 <span>£<?php echo $product->getProductPrice()?></span>
             </div>
