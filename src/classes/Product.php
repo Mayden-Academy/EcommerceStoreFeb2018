@@ -52,6 +52,4 @@ class Product
     {
         return $this->imageFilePath;
     }
-
 }
-
